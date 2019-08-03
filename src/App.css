@@ -8,6 +8,24 @@
   pointer-events: none;
 }
 
+.top-bar-bio{
+  background: url('../src/images/trees.jpg');
+  font-size: 40px
+}
+
+.top-bar-projects{
+  background: url('../src/images/trees.jpg');
+  color: #707070;
+}
+
+.top-bar-contact{
+  background: url('../src/images/trees.jpg');
+}
+
+.top-bar-{
+  background: url('../src/images/trees.jpg');
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
