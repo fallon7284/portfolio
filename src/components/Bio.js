@@ -1,16 +1,28 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import TopBar from './topBar'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 export default () => {
     return (
-        <div>
+        <div className="bio">
             <MuiThemeProvider>
                 <TopBar/>
             </MuiThemeProvider>
-            This is my bio, fam, check it out
-            <Link to="/">Go home</Link>
+            <section id="bio-top">
+                <div className="section">
+                    top
+                </div>
+            </section>
+            <section id="bio-middle">
+                <div>
+                    middle
+                </div>
+            </section>
+            <section id="bio-bottom">
+                <div>
+                    bottom
+                </div>
+            </section>
         </div>
     )
 }

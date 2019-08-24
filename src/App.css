@@ -8,22 +8,154 @@
   pointer-events: none;
 }
 
-.top-bar-bio{
-  background: url('../src/images/trees.jpg');
-  font-size: 40px
+.home{
+  width: 100%;
+  height: 100vh;
+  background: url('../src/images/mtJeffBW.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.top-bar-projects{
-  background: url('../src/images/trees.jpg');
-  color: #707070;
+.bio{
+  /* filter: saturate(.4); */
+  width: 100%;
+  height: 100vh;
+  background: url('../src/images/crawfordPath.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: futura;
+  font-size: 1.5em;
+
 }
 
-.top-bar-contact{
+/* .bio.animated {
+  -webkit-animation: filter-animation 5s infinite;
+} */
+
+/* .top-bar-contact{
   background: url('../src/images/trees.jpg');
+} */
+
+/* .top-bar-{ */
+  /* background: url('../src/images/trees.jpg'); */
+  /* opacity: .7; */
+/* } */
+
+.resume{
+  width: 100%;
+  height: 100vh;
 }
 
-.top-bar-{
-  background: url('../src/images/trees.jpg');
+.project-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.thumb{
+  height: 30vh;
+  width: 45%;
+  background-color: white;
+  border: 3px grey solid;
+  border-radius: 2%;
+  margin: 6px;
+  opacity: .5;
+  font-family: futura;
+  font-size: 2em;
+  margin-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project{
+  width: 100%;
+  height: 7vh;
+}
+
+.project-body{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.project-body .details{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.details img{
+  overflow: hidden;
+  width: 100%;
+  height: 100%
+}
+
+.thumb p{
+  font-size: 12px;
+}
+
+hr{
+  width: 75%
+}
+
+#bio-top{
+  width: 100%;
+  height: 100vh;
+  background: url('../src/images/crawfordPath.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#bio-middle{
+  width: 100%;
+  height: 100vh;
+  background: url('../src/images/crawfordPath.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#bio-bottom{
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bio .section{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end
+}
+
+
+.background{
+  background: url('../src/images/bwOutdoor.jpg');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1; 
+  position: relative;
+  /* filter: blur(1px) */
+}
+
+/* .content{
+  filter: blur(2px)
+} */
+
+.projects{
+  z-index: 9999;
 }
 
 .App-header {
@@ -49,3 +181,4 @@
     transform: rotate(360deg);
   }
 }
+
