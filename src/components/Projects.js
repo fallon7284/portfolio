@@ -7,13 +7,14 @@ import ProjectThumb from './ProjectThumb'
 
 export default () => {
     return (
-        <div className="background">
-            <div className="content" style={{position: 'fixed', left: 0, right: 0, zIndex: 9999}}>
+        <div className="projects">
+        <div className="background"></div>
+            <div className="content">
                 <MuiThemeProvider>
                     <TopBar/>
                 </MuiThemeProvider>
             </div>
-            <div className="project-list" style={{position: 'fixed', left: 0, right: 0, zIndex: 1}}>
+            <div className="project-list">
                 {projects.map((p, i) => {
                     return (
                         <ProjectThumb key={i} p={p}/>
