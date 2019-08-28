@@ -24,6 +24,7 @@ export default class Contact extends React.Component{
         const { name, email, message } = this.state
         console.log(message)
         this.setState({messages: [...this.state.messages, {name, email, message}]})
+        this.setState({name: '', email: '', message: ''})
     }
 
     isEmail = (email) => {
@@ -38,7 +39,7 @@ export default class Contact extends React.Component{
         const {name, email, message} = this.state
         const messageValid = (name.length > 0 && email.length > 0 && this.isEmail(email) && message)
         return (
-            <div>
+            <div className="contact">
                 <MuiThemeProvider>
                     <TopBar/>
                 </MuiThemeProvider>
@@ -49,9 +50,9 @@ export default class Contact extends React.Component{
                             e.preventDefault()
                             this.handleSubmit()
                         }}>
-                        <input name="name" placeholder="Your Name" onChange={this.handleChange}></input>
-                        <input name="email" placeholder="Your Email Address" onChange={this.handleChange}></input>
-                        <input name="message" placeholder="Your Message" onChange={this.handleChange}></input>
+                        <input name="name" placeholder="Your Name" value={this.state.name} onChange={this.handleChange}></input>
+                        <input name="email" placeholder="Your Email Address" value={this.state.email} onChange={this.handleChange}></input>
+                        <input name="message" placeholder="Your Message" value={this.state.message} onChange={this.handleChange}></input>
                         {messageValid && <button type="submit">Submit</button>}
                     </form>
                     </div>

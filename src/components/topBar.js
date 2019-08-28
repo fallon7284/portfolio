@@ -41,6 +41,7 @@ export default () => {
                 style={styles.button} 
                 component={Link} 
                 to={'/'}
+                prefetch="true"
             >
                 <Typography style={{...styles.typography, fontSize: '2em'}}>Brendan Fallon</Typography>
             </Button>
@@ -56,6 +57,7 @@ export default () => {
                     style={styles.button} 
                     component={Link} 
                     to={'/contact'}
+                    prefetch="true"
                 >
                     <Typography style={styles.typography}>Contact</Typography>
                 </Button>
@@ -63,13 +65,15 @@ export default () => {
                     style={styles.button} 
                     component={Link} 
                     to={'/projects'}
+                    prefetch="true"
                 >
                     <Typography style={styles.typography}>Projects</Typography>
                 </Button>
                 <Button 
                     style={styles.button} 
                     component={Link} 
-                    to={'/bio#one'}
+                    to={'/bio'}
+                    prefetch="true"
                 >
                     <Typography style={styles.typography}>Bio</Typography>
                 </Button>            

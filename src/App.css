@@ -19,8 +19,9 @@
   font-size: 3em;
   display: flex;
   flex-direction: column;
-  top: 50%;
-  transform: translate(0%, 30%)
+  position: fixed;
+  top: 25%;
+  /* transform: translate(0%, 30%) */
 }
 
 /* this is my home section */
@@ -38,8 +39,8 @@
   color: rgb(117, 113, 113);
   text-decoration: none;
   animation-name: colorup;
-  animation-duration: 3.5s;
-  animation-delay: 4s;
+  animation-duration: 4s;
+  animation-delay: 3s;
   animation-fill-mode: both;
 }
 
@@ -51,9 +52,10 @@
   left: 65%;
   transform: translate(-50%, -50%);
   animation-name: quoteslide;
-  animation-duration: 5s;
+  animation-duration: 6s;
   text-decoration: none;
 }
+
 
 .quote2{
   width: 100%;
@@ -81,9 +83,9 @@
   top: 10%
 }
 
-.bio-content{
+.bio{
   position: relative;
-  height: 100%;
+  height: 100vh;
   background: url('../src/images/crawfordPath.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -97,43 +99,23 @@
   scroll-snap-type: y proximity;
 }
 
-/* /* #one{
-  height: 100vh;
-  background-image: url('../src/images/construction.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 9999
-} */
-
-/* #two{
-  height: 100vh;
-  background-image: url('../src/images/fsa.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 9999;
-}
-
-#two .section{
+.bio-content{
+  position: fixed;
+  width: 100%;
+  left: 0%;
+  animation-name: bioslide;
+  animation-duration: 3.5s;
   color: black;
 }
 
-#three{
-  height: 100vh;
-  background-image: url('../src/images/dev.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 9999;
-} */
 
 .bio-content a{
   text-decoration: none;
   height: 100vh;
 }
 
-/* this is my project secton */
+
+/* this is my project section */
 
 
 .thumb{
@@ -239,11 +221,10 @@ hr{
 
 @keyframes quoteslide {
   from {
-    left: 150%;
-    right: 200%
+    opacity: 0
   }
   to {
-    left: 65%;
+    opacity: 1
   }
 }
 @keyframes quoteslide2 {
@@ -254,6 +235,19 @@ hr{
     top: 22%;
   }
 }
+
+@keyframes bioslide {
+  from {
+    /* left: -100%; */
+    opacity: 0;
+  }
+  to {
+    /* left: 0%; */
+    opacity: 1;
+  }
+}
+
+
 
 @keyframes colorup{
   from {
