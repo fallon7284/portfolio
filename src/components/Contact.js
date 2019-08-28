@@ -45,18 +45,20 @@ export default class Contact extends React.Component{
                 <div className="contact">
                     <a href="mailto:brendanc.fallon@gmail.com" rel="noopener noreferrer">Shoot me an email
                     </a>
-                    <form>
+                    <form onSubmit={(e) => {
+                            e.preventDefault()
+                            this.handleSubmit()
+                        }}>
                         <input name="name" placeholder="Your Name" onChange={this.handleChange}></input>
                         <input name="email" placeholder="Your Email Address" onChange={this.handleChange}></input>
                         <input name="message" placeholder="Your Message" onChange={this.handleChange}></input>
-                        {messageValid && <button type="submit" onSubmit={(e) => {
-                            e.preventDefault()
-                            this.handleSubmit()
-                        }}>Submit</button>}
+                        {messageValid && <button type="submit">Submit</button>}
                     </form>
                     </div>
                 <div className="messages">
-
+                        {this.state.messages.map(m => {
+                            return <div>{`${m.name} at ${m.email} says ${m.message}`}</div>
+                        })}
                 </div>
             </div>
         )

@@ -25,7 +25,7 @@ module.exports = [
         image: require('/Users/brendanfallon/projects/portfolio/src/images/Screen Shot 2019-08-27 at 2.45.26 PM.png'),
         description: 'The first team project from my time at Fullstack Academy,' +  
         'Grace Shopper was a Full Stack mock e-commerce web application.',
-        deployed: null,
-        github: 'https://sellinbags.herokuapp.com',
+        deployed: 'https://sellinbags.herokuapp.com',
+        github: 'https://github.com/graceshoppingbags/sellinbags',
     },
 ]
