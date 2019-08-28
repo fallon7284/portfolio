@@ -16,13 +16,15 @@
 
 // // import React, { Component } from 'react';
 // // import { Document, Page } from 'react-pdf';
-// // import res from '../images/BrendanFallon.pdf'
+// import res from '../images/BrendanFallon.pdf'
  
 // class Resume extends Component {
 //   state = {
 //     numPages: null,
 //     pageNumber: 1,
 //   }
+
+
  
 //   onDocumentLoadSuccess = ({ numPages }) => {
 //     this.setState({ numPages });

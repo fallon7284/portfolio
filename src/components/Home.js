@@ -1,15 +1,17 @@
 import React from 'react'
-import TopBar from './topBar'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import { Link } from 'react-router-dom'
+// import TopBar from './topBar'
+// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 export default () => {
     return (
         <div>
-            <MuiThemeProvider>
-                <TopBar/>
-            </MuiThemeProvider>
-            <div className="home"></div>
-            {/* <Link to="/insta">Check me out on Instagram</Link> */}
+            <div className="home">
+                <Link to="/bio" style={{textDecoration: 'none', color: 'white'}}>
+                    <div className="quote1">The journey of a thousand miles</div>
+                    <div className="quote2">begins with a single step.</div>
+                </Link>
+            </div>
         </div>
     )
 }

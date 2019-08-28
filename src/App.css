@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .App-logo {
@@ -8,65 +11,150 @@
   pointer-events: none;
 }
 
+/* this is my contact section */
+
+.contact{
+  height: 100vh;
+  width: 100%;
+  font-size: 3em;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  transform: translate(0%, 50%)
+}
+
+/* this is my home section */
+
 .home{
   width: 100%;
   height: 100vh;
-  background: url('../src/images/mtJeffBW.jpg');
+  background: url('../src/images/mtJeffColor.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: open-sans;
+  font-size: 5vw;
+  font-weight: 500;
+  color: rgb(117, 113, 113);
+  text-decoration: none;
+  animation-name: colorup;
+  animation-duration: 3.5s;
+  animation-delay: 4s;
+  animation-fill-mode: both;
 }
 
-.bio{
-  /* filter: saturate(.4); */
+
+.home .quote1{
   width: 100%;
-  height: 100vh;
+  position: fixed;
+  top: 15%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  animation-name: quoteslide;
+  animation-duration: 5s;
+  text-decoration: none;
+}
+
+.quote2{
+  width: 100%;
+  position: fixed;
+  top: 22%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  animation-name: quoteslide2;
+  animation-duration: 5.3s;
+}
+
+
+/* this is my bio section */
+
+.section{
+  position: relative;
+  top: 15%;
+  font-size: 7vh;
+  color: white;
+  z-index: 1;
+  text-decoration: none;
+}
+
+#one{
+  top: 10%
+}
+
+.bio-content{
+  position: relative;
+  height: 100%;
   background: url('../src/images/crawfordPath.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: futura;
-  font-size: 1.5em;
-
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y proximity;
 }
 
-/* .bio.animated {
-  -webkit-animation: filter-animation 5s infinite;
+/* /* #one{
+  height: 100vh;
+  background-image: url('../src/images/construction.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 9999
 } */
 
-/* .top-bar-contact{
-  background: url('../src/images/trees.jpg');
+/* #two{
+  height: 100vh;
+  background-image: url('../src/images/fsa.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 9999;
+}
+
+#two .section{
+  color: black;
+}
+
+#three{
+  height: 100vh;
+  background-image: url('../src/images/dev.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 9999;
 } */
 
-/* .top-bar-{ */
-  /* background: url('../src/images/trees.jpg'); */
-  /* opacity: .7; */
-/* } */
-
-.resume{
-  width: 100%;
+.bio-content a{
+  text-decoration: none;
   height: 100vh;
 }
 
+/* this is my project secton */
+
 
 .thumb{
-  height: 30vh;
-  width: 45%;
-  background-color: rgb(197, 194, 194);
-  border: 3px grey solid;
-  border-radius: 2%;
+  height: 35vh;
+  width: 85%;
+  background-color: rgba(41, 40, 40, 0.6);
   margin: 6px;
-  opacity: .8;
+  padding: 1.5vh;
   font-family: futura;
-  font-size: 2em;
+  font-size: 2.5em;
+  color: white;
   margin-bottom: 3%;
   display: flex;
   flex-direction: column;
 }
 
+
 .project{
   width: 100%;
-  /* height: 7vh; */
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #707070 ;
 }
 
 .project-body{
@@ -74,72 +162,48 @@
   flex-direction: row;
   width: 100%;
   height: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .details{
-  width: 100%;
-  height: 100%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-between;
   overflow: hidden;
+  height: 100%;
+  top: 2%;
+  bottom: 2%;
+}
+
+.details .description{
+  padding-right: 10%;
+  padding-left: 8%;
+  align-self: center;
 }
 
 .details img{
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 30vh;
+  transform: translate(5%, 5%);
   object-fit: contain;
 }
 
 .thumb p{
-  font-size: 12px;
+  font-size: 1.6vh;
 }
 
 hr{
   width: 75%
 }
 
-#bio-top{
-  width: 100%;
-  height: 100vh;
-  background: url('../src/images/crawfordPath.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#bio-middle{
-  width: 100%;
-  height: 100vh;
-  background: url('../src/images/crawfordPath.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#bio-bottom{
-  width: 100%;
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.bio .section{
-  display: flex;
-  flex-direction: column;
-  align-content: flex-end
+.github{
+  text-shadow: 10px 10px #707070;
+  color: blue
 }
 
 
-/* .background{
-  background: url('../src/images/bwOutdoor.jpg') no-repeat center center fixed;;
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 9999; 
-} */
 
 .project-list{
   background: url('../src/images/bwOutdoor.jpg') no-repeat center center fixed;
@@ -149,22 +213,16 @@ hr{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding-top: 100px;
+  justify-content: space-evenly;
+  padding-top: 5em;
+  padding-bottom: 2em;
   padding-left: 10%;
   padding-right: 10%;
   z-index: 1;
 }
-/* .content{
-  filter: blur(2px)
-} */
 
-/* .projects{
-  background-color: transparent;
-  z-index: 1;
-} */
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -173,18 +231,40 @@ hr{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes quoteslide {
   from {
-    transform: rotate(0deg);
+    left: 150%;
+    right: 200%
   }
   to {
-    transform: rotate(360deg);
+    left: 65%;
+  }
+}
+@keyframes quoteslide2 {
+  from {
+    top: -50%;
+  }
+  to {
+    top: 22%;
+  }
+}
+
+@keyframes colorup{
+  from {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%); 
+    -o-filter: grayscale(100%); 
+  }
+  to {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%); 
+    -o-filter: grayscale(0%); 
   }
 }
 

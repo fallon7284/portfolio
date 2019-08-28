@@ -8,46 +8,30 @@ import Button from '@material-ui/core/Button';
 
 
 export default () => {
-console.log(window.location)
-let page 
-// switch(window.location.pathname.split('/').join('').toLowerCase()){
-//     case 'bio':
-//     page = 'black'
-//     break
-//     case 'contact':
-//     page = 'red'
-//     break 
-//     case 'projects':
-//     page = 'green'
-//     break  
-//     default:
-//     page = '#808080'    
-// }
-
-const styles = {
-    appBar: {
-        fontFamily: 'futura', 
-        backgroundColor: 'black', 
-        display: 'flex', 
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        // opacity: .5,
-        position: 'fixed'
-    },
-    button: {
-        color: "inherit",
-        alignItems: 'left'
-    },
-    typography: {
-        fontFamily: 'futura', 
-        color: "white"
-    },
-    links: {
-        display: 'flex',
-        flexDirection: 'row-reverse',
-        paddingRight: '15px'
+    const styles = {
+        appBar: {
+            fontFamily: 'futura', 
+            backgroundColor: 'black', 
+            display: 'flex', 
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            opacity: .9,
+            position: 'fixed'
+        },
+        button: {
+            color: "inherit",
+            alignItems: 'left'
+        },
+        typography: {
+            fontFamily: 'futura', 
+            color: "white"
+        },
+        links: {
+            display: 'flex',
+            flexDirection: 'row-reverse',
+            paddingRight: '15px'
+        }
     }
-}
     return (
         <AppBar 
             className={`top-bar-`}
@@ -85,7 +69,7 @@ const styles = {
                 <Button 
                     style={styles.button} 
                     component={Link} 
-                    to={'/bio'}
+                    to={'/bio#one'}
                 >
                     <Typography style={styles.typography}>Bio</Typography>
                 </Button>            

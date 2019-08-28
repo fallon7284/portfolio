@@ -1,6 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { Home, Projects, Bio, Contact, TopBar, Resume } from '../src/components'
+import { 
+  Home,
+  Projects, 
+  Bio, 
+  Contact,
+  // TopBar,
+  // Resume
+ } from '../src/components'
 import './App.css';
 
 

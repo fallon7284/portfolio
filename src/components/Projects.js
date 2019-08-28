@@ -8,12 +8,10 @@ import ProjectThumb from './ProjectThumb'
 export default () => {
     return (
         <div className="projects">
-        <div className="background"></div>
-            <div className="content">
-                <MuiThemeProvider>
-                    <TopBar/>
-                </MuiThemeProvider>
-            </div>
+        {/* <div className="background"></div> */}
+        <MuiThemeProvider>
+            <TopBar/>
+        </MuiThemeProvider>
             <div className="project-list">
                 {projects.map((p, i) => {
                     return (

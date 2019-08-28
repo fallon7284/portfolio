@@ -1,26 +1,38 @@
 import React from 'react'
-import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
+import { DiGithubFull } from "react-icons/di"
+
 
 export default ({p}) => {
+    const deployedOrGithub = p.deployed ? p.deployed : p.github
     return (
-        // <Grid container justify="center" spacing={0} className="project-thumb">
-        //     <Paper className="project-name">{p.name}</Paper>
-        //     {p.image && <img src={p.image} alt={p.name} style={{height: '150px', width: '150px'}}></img>}
-        // </Grid>
         <div className="thumb">
-            <div className="project">
-                {p.name}
-                <hr />
-            </div>
             <div className="project-body">
                 <div className="details">
-                    <img src={p.image}></img>
+                    <a target="blank" rel="noopener noreferrer" href={deployedOrGithub}>
+                        <img src={p.image} alt={p.name}></img>
+                    </a>
                 </div>
                 <div className="details">
-                    <p>
+                    <div className="project">
+                        <a target="blank" rel="noopener noreferrer" href={deployedOrGithub} style={{
+                            textDecoration: 'none',
+                            color: 'white'}}
+                        >
+                            {p.name}
+                        </a>
+                        <hr />
+                    </div>
+                    <p className="description">
                         {p.description}
                     </p>
+                    <a target="blank" rel="noopener noreferrer" href={p.github}>
+                        <DiGithubFull className="github" style={{
+                            fontSize: '1.7em',
+                            bottom: '99%', 
+                            textDecoration: 'none', 
+                            color: 'white'}}
+                        />
+                    </a>
                 </div>
             </div>
         </div>

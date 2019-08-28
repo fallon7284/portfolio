@@ -2,91 +2,30 @@ module.exports = [
     {
         name: 'Pixalive',
         image: require('../src/images/pixalive.png'),
-        description: 'Pixalive is a free, multi-user, real-time editor for animated sprites and pixel art.  It was built with React, Socket.io, HTML Canvas, and PostgreSQL',
-        url: 'https://pixalive.herokuapp.com'
+        description: 'Pixalive is a free, multi-user, real-time editor' +
+        'for animated sprites and pixel art.  It was built with' +
+        ' only functional components using React-Hooks, ' +
+        'Socket.io, HTML Canvas, and PostgreSQL.',
+        deployed: 'https://pixalive.herokuapp.com',
+        github: 'https://github.com/pixalive/pixalive',
     },
     {
         name: 'CatOrNah?',
-        image: require('../src/images/thatsCat.PNG'),
-        description: 'CatOrNah? is a React Native image-recognition mobile camera application using the Clarifai image-recognition API to allow a user to snap a photo and identify the subject as either a cat or nah.',
-        url: 'https://github.com/fallon7284/catornah-'
+        image: require('../src/images/catornah.jpg'),
+        description: 'For a second project at Fullstack Academy,' + 
+        ' students were challenged to learn and implement a new technology during a' +
+        ' four-day solo project.  CatOrNah? is a React Native ' +
+        ' camera application using the Clarifai image-recognition API to allow a user' +
+        ' to snap a photo and identify the subject as either a cat... or nah.',
+        deployed: null,
+        github: 'https://github.com/fallon7284/catornah-',
     },
     {
         name: 'Grace Shopper',
-        image: null,
-        description: 'Mock e-commerce web application.',
-        url: 'https://sellinbags.herokuapp.com'
-    },
-    {
-        name: 'Pixalive',
-        image: require('../src/images/pixalive.png'),
-        description: 'Pixalive is a free, multi-user, real-time editor for animated sprites and pixel art.  It was built with React, Socket.io, HTML Canvas, and PostgreSQL',
-        url: 'https://pixalive.herokuapp.com'
-    },
-    {
-        name: 'CatOrNah?',
-        image: require('../src/images/thatsCat.PNG'),
-        description: 'CatOrNah? is a React Native image-recognition mobile camera application using the Clarifai image-recognition API to allow a user to snap a photo and identify the subject as either a cat or nah.',
-        url: 'https://github.com/fallon7284/catornah-'
-    },
-    {
-        name: 'Grace Shopper',
-        image: null,
-        description: 'Mock e-commerce web application.',
-        url: 'https://sellinbags.herokuapp.com'
-    },
-    {
-        name: 'Pixalive',
-        image: require('../src/images/pixalive.png'),
-        description: 'Pixalive is a free, multi-user, real-time editor for animated sprites and pixel art.  It was built with React, Socket.io, HTML Canvas, and PostgreSQL',
-        url: 'https://pixalive.herokuapp.com'
-    },
-    {
-        name: 'CatOrNah?',
-        image: require('../src/images/thatsCat.PNG'),
-        description: 'CatOrNah? is a React Native image-recognition mobile camera application using the Clarifai image-recognition API to allow a user to snap a photo and identify the subject as either a cat or nah.',
-        url: 'https://github.com/fallon7284/catornah-'
-    },
-    {
-        name: 'Grace Shopper',
-        image: null,
-        description: 'Mock e-commerce web application.',
-        url: 'https://sellinbags.herokuapp.com'
-    },
-    {
-        name: 'Pixalive',
-        image: require('../src/images/pixalive.png'),
-        description: 'Pixalive is a free, multi-user, real-time editor for animated sprites and pixel art.  It was built with React, Socket.io, HTML Canvas, and PostgreSQL',
-        url: 'https://pixalive.herokuapp.com'
-    },
-    {
-        name: 'CatOrNah?',
-        image: require('../src/images/thatsCat.PNG'),
-        description: 'CatOrNah? is a React Native image-recognition mobile camera application using the Clarifai image-recognition API to allow a user to snap a photo and identify the subject as either a cat or nah.',
-        url: 'https://github.com/fallon7284/catornah-'
-    },
-    {
-        name: 'Grace Shopper',
-        image: null,
-        description: 'Mock e-commerce web application.',
-        url: 'https://sellinbags.herokuapp.com'
-    },
-    {
-        name: 'Pixalive',
-        image: require('../src/images/pixalive.png'),
-        description: 'Pixalive is a free, multi-user, real-time editor for animated sprites and pixel art.  It was built with React, Socket.io, HTML Canvas, and PostgreSQL',
-        url: 'https://pixalive.herokuapp.com'
-    },
-    {
-        name: 'CatOrNah?',
-        image: require('../src/images/thatsCat.PNG'),
-        description: 'CatOrNah? is a React Native image-recognition mobile camera application using the Clarifai image-recognition API to allow a user to snap a photo and identify the subject as either a cat or nah.',
-        url: 'https://github.com/fallon7284/catornah-'
-    },
-    {
-        name: 'Grace Shopper',
-        image: null,
-        description: 'Mock e-commerce web application.',
-        url: 'https://sellinbags.herokuapp.com'
+        image: require('/Users/brendanfallon/projects/portfolio/src/images/Screen Shot 2019-08-27 at 2.45.26 PM.png'),
+        description: 'The first team project from my time at Fullstack Academy,' +  
+        'Grace Shopper was a Full Stack mock e-commerce web application.',
+        deployed: null,
+        github: 'https://sellinbags.herokuapp.com',
     },
 ]
