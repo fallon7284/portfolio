@@ -11,6 +11,21 @@
   pointer-events: none;
 }
 
+/* this is my resume section */
+
+.resume{
+  position: fixed;
+  top: 6vh;
+  height: 94vh;
+  width: 100%;
+}
+
+iframe{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
 /* this is my contact section */
 
 .contact{
@@ -20,11 +35,25 @@
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 25%;
-  /* transform: translate(0%, 30%) */
+  top: 15%;
 }
 
+/* .form{
+  width: 75%;
+  align-self: center;
+  border: black 2px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.form input{
+  width: 75%;
+  justify-self: center;
+} */
+
 /* this is my home section */
+
 
 .home{
   width: 100%;
@@ -32,7 +61,8 @@
   background: url('../src/images/mtJeffColor.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; 
+  position: fixed;
   font-family: open-sans;
   font-size: 5vw;
   font-weight: 500;
@@ -48,12 +78,15 @@
 .home .quote1{
   width: 100%;
   position: fixed;
+  display: flex;
+  flex-direction: row;
   top: 15%;
   left: 65%;
   transform: translate(-50%, -50%);
   animation-name: quoteslide;
   animation-duration: 6s;
   text-decoration: none;
+  
 }
 
 
@@ -66,6 +99,17 @@
   animation-name: quoteslide2;
   animation-duration: 5.3s;
 }
+
+.quote{
+  text-shadow: 0 0 1px;
+  transition-property: text-shadow;
+  transition-duration: 2s;
+}
+
+.home .quote:hover{
+  text-shadow: 0 0 10px rgb(230, 230, 230)
+}
+
 
 
 /* this is my bio section */
@@ -86,32 +130,42 @@
 .bio{
   position: relative;
   height: 100vh;
-  background: url('../src/images/crawfordPath.jpg');
+  /* background: url('../src/images/fsa.jpg'); */
+  background-color: rgba(39, 41, 48, .9);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  z-index: 2;
-  overflow-x: hidden;
-  overflow-y: auto;
-  scroll-snap-type: y proximity;
+  z-index: 1;
+  /* overflow-x: hidden;
+  overflow-y: auto; */
 }
 
 .bio-content{
   position: fixed;
-  width: 100%;
+  width: 85%;
+  height: 80%;
+  transform: translate(9%);
+  /* background-color: rgba(139, 139, 139, 0.5); */
+  top: 12%;
   left: 0%;
   animation-name: bioslide;
-  animation-duration: 3.5s;
+  animation-duration: 1s;
   color: black;
+
 }
 
 
-.bio-content a{
-  text-decoration: none;
-  height: 100vh;
+.cartoon{
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  top:60%;
+  left: 50%;
+  background-image: url('/Users/brendanfallon/projects/portfolio/src/images/constructionCartoon.jpg');
+  z-index: 999;
 }
 
 
@@ -121,7 +175,8 @@
 .thumb{
   height: 35vh;
   width: 85%;
-  background-color: rgba(41, 40, 40, 0.6);
+  background-color: rgba(39, 41, 48, .9);
+  /* background-color: rgb(209, 209, 209, .8); */
   margin: 6px;
   padding: 1.5vh;
   font-family: futura;
@@ -130,13 +185,15 @@
   margin-bottom: 3%;
   display: flex;
   flex-direction: column;
+  transition: all .2s ease-in-out;
 }
+
+/* .thumb {  } */
+.thumb:hover { transform: scale(1.005); }
 
 
 .project{
   width: 100%;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px #707070 ;
 }
 
 .project-body{
@@ -159,6 +216,7 @@
 }
 
 .details .description{
+  width: 100%;
   padding-right: 10%;
   padding-left: 8%;
   align-self: center;
@@ -166,7 +224,7 @@
 
 .details img{
   overflow: hidden;
-  width: 90%;
+  width: 30vh;
   height: 30vh;
   transform: translate(5%, 5%);
   object-fit: contain;
@@ -180,13 +238,6 @@ hr{
   width: 75%
 }
 
-.github{
-  text-shadow: 10px 10px #707070;
-  color: blue
-}
-
-
-
 .project-list{
   background: url('../src/images/bwOutdoor.jpg') no-repeat center center fixed;
   background-position: center;
@@ -196,7 +247,7 @@ hr{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding-top: 5em;
+  padding-top: 7em;
   padding-bottom: 2em;
   padding-left: 10%;
   padding-right: 10%;
@@ -236,14 +287,23 @@ hr{
   }
 }
 
-@keyframes bioslide {
+@keyframes thousandglow {
   from {
-    /* left: -100%; */
-    opacity: 0;
+    color:white;
   }
   to {
-    /* left: 0%; */
-    opacity: 1;
+    color: yellow;
+  }
+}
+
+@keyframes bioslide {
+  from {
+    top: 100%;
+    bottom:200%;
+  }
+  to {
+    top: 12%;
+    bottom: 100%
   }
 }
 

@@ -6,7 +6,7 @@ import {
   Bio, 
   Contact,
   // TopBar,
-  // Resume
+  Resume
  } from '../src/components'
 import './App.css';
 
@@ -20,7 +20,7 @@ function App() {
       <Route exact path="/projects" component={Projects}/>
       <Route path="/bio" component={Bio}/>
       <Route path="/contact" component={Contact}/>
-      {/* <Route path="/resume" component={Resume} /> */}
+      <Route path="/resume" component={Resume} />
       {/* <Route path = "/insta" component={Insta}/> */}
     </Router>
     </div>

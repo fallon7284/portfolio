@@ -3,9 +3,9 @@ module.exports = [
         name: 'Pixalive',
         image: require('../src/images/pixalive.png'),
         description: 'Pixalive is a free, multi-user, real-time editor' +
-        'for animated sprites and pixel art.  It was built with' +
-        ' only functional components using React-Hooks, ' +
-        'Socket.io, HTML Canvas, and PostgreSQL.',
+        ' for creating animated sprites and pixel art.  It was built with' +
+        ' only functional components using React-Hooks ' +
+        'along with Socket.io, HTML Canvas, and PostgreSQL.',
         deployed: 'https://pixalive.herokuapp.com',
         github: 'https://github.com/pixalive/pixalive',
     },

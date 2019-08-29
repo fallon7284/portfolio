@@ -19,6 +19,10 @@ export default class Bio extends React.Component{
         'this story also has a third part']
     }
 
+    componentDidMount(){
+        this.setState({part: 0})
+    }
+
     incrementStoryPart(){
         const part = this.state.part + 1
         this.setState({part})
@@ -44,6 +48,7 @@ export default class Bio extends React.Component{
                     <TopBar/>
                 </MuiThemeProvider>
                 {pages}
+                <div className="cartoon"></div>
             </div>
         )
     }
