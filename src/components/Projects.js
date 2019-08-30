@@ -8,7 +8,6 @@ import ProjectThumb from './ProjectThumb'
 export default () => {
     return (
         <div className="projects">
-        {/* <div className="background"></div> */}
         <MuiThemeProvider>
             <TopBar/>
         </MuiThemeProvider>

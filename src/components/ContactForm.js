@@ -1,4 +1,16 @@
 import React from 'react'
+import TextField from '@material-ui/core/TextField'
+
+const styles = {
+    input: {
+        height: "20vh",
+        width: "100%"
+    },
+    message: {
+        height: "40vh",
+        width: "100%"
+    }
+}
 
 export default ({messageValid, state, handleChange, handleSubmit}) => {
     return (
@@ -6,9 +18,32 @@ export default ({messageValid, state, handleChange, handleSubmit}) => {
             e.preventDefault()
             handleSubmit()
             }}>
-            <input name="name" placeholder="Your Name" value={state.name} onChange={handleChange}></input>
-            <input name="email" placeholder="Your Email Address" value={state.email} onChange={handleChange}></input>
-            <input name="message" placeholder="Your Message" value={state.message} onChange={handleChange}></input>
+            <TextField 
+                name="name" 
+                label="Your Name" 
+                value={state.name} 
+                onChange={handleChange}
+                variant="outlined"
+                style={styles.input}
+            />
+            <TextField 
+                name="email" 
+                label="Your Email Address" 
+                value={state.email} 
+                onChange={handleChange}
+                variant="outlined"
+                style={styles.input}
+            />
+            <TextField 
+                name="message" 
+                label="Your Message" 
+                value={state.message} 
+                onChange={handleChange}
+                variant="outlined"
+                multiline
+                rowsMax="10"
+                style={styles.message}
+            />
             {messageValid && <button type="submit">Submit</button>}
         </form>
     )

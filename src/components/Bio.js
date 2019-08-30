@@ -13,10 +13,11 @@ export default class Bio extends React.Component{
         }
         this.incrementStoryPart = this.incrementStoryPart.bind(this)
         this.story = ['I took the first step on my journey to Software Development' +
-        ' in late 2018, ending a career in NYC construction to enroll ' +
-        'at Fullstack Academy.', 'I discovered a passion and talent for problem solving as well as a' + 
-        'culture of curiosity that excited me in a way I had long wished for.', 
-        'this story also has a third part']
+        ' in late 2018, enrolling in one-week bootcamp prep course at Fullstack Academy.', 'The course ended on a Sunday, and on Monday I gave my two weeks notice at my job of nine years.',
+        'I had learned just enough to know that this was the field that I wanted to pursue; one that I found more challenging and rewarding than I could have imagined.', 
+        'At Fullstack I discovered a passion and talent for problem solving.' + 
+        ' I also found a community of smart, curious people who were excited by the same things that excited me.', 
+        'For 13 weeks on-campus, we struggled and learned, failed and succeeded together.  Here are some of the things that we built:']
     }
 
     componentDidMount(){
@@ -30,7 +31,6 @@ export default class Bio extends React.Component{
     }
 
     render(){
-        console.log(this.state.part)
         const pages = (this.state.part === this.story.length - 1) ? 
         <Link to="/projects" style={{textDecoration: 'none'}} prefetch="true"><BioPages 
             part={this.state.part} 
@@ -48,7 +48,6 @@ export default class Bio extends React.Component{
                     <TopBar/>
                 </MuiThemeProvider>
                 {pages}
-                <div className="cartoon"></div>
             </div>
         )
     }

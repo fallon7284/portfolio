@@ -36,22 +36,38 @@ const styles = {
 
 
 export default () => {
-        const resume = window.location.pathname === '/resume' ? 
-                <Button 
-                    style={styles.button} 
-                    href={Resume}
-                    download
-                    >
-                    <Typography style={{...styles.typography, color: 'rgb(60, 240, 260)'}}>Download</Typography>
-                </Button> :
-                <Button 
-                    style={styles.button} 
-                    component={Link} 
-                    to={'/resume'}
-                    prerender="true"
-                    >
-                    <Typography style={styles.typography}>Resume</Typography>
-                </Button>
+    const resume = window.location.pathname === '/resume' ? 
+            <Button 
+                style={styles.button} 
+                href={Resume}
+                download
+                >
+                <Typography style={{...styles.typography, color: 'rgb(60, 240, 260)'}}>Download</Typography>
+            </Button> :
+            <Button 
+                style={styles.button} 
+                component={Link} 
+                to={'/resume'}
+                prerender="true"
+                >
+                <Typography style={styles.typography}>Resume</Typography>
+            </Button>
+    const contact = window.location.pathname === '/contact' ?
+            <Button 
+                style={styles.button} 
+                href="mailto:brendanc.fallon@gmail.com" 
+                rel="noopener noreferrer"
+                >
+                <Typography style={{...styles.typography, color: 'rgb(60, 240, 260)'}}>Email</Typography>
+            </Button> :
+            <Button 
+                style={styles.button} 
+                component={Link} 
+                to={'/contact'}
+                prerender="true"
+                >
+                <Typography style={styles.typography}>Contact</Typography>
+            </Button>
     
     return (
         <AppBar 
@@ -68,21 +84,14 @@ export default () => {
             </Button>
             <div style={styles.links}>
                 {resume}
-                <Button 
-                    style={styles.button} 
-                    component={Link} 
-                    to={'/contact'}
-                    prefetch="true"
-                >
-                    <Typography style={styles.typography}>Contact</Typography>
-                </Button>
+                {contact}
                 <Button 
                     style={styles.button} 
                     component={Link} 
                     to={'/projects'}
                     prefetch="true"
                 >
-                    <Typography style={styles.typography}>Projects</Typography>
+                    <Typography style={{...styles.typography, color: window.location.pathname === '/projects' ? 'rgb(185, 185, 185)' : styles.typography.color}}>Projects</Typography>
                 </Button>
                 <Button 
                     style={styles.button} 
@@ -90,7 +99,7 @@ export default () => {
                     to={'/bio'}
                     prefetch="true"
                 >
-                    <Typography style={styles.typography}>Bio</Typography>
+                    <Typography style={{...styles.typography, color: window.location.pathname === '/bio' ? 'rgb(185, 185, 185)' : styles.typography.color}}>Bio</Typography>
                 </Button>            
             </div>
         </AppBar>

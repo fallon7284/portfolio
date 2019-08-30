@@ -9,8 +9,8 @@ export default () => {
             <div className="home">
                 <Link to="/bio" style={{textDecoration: 'none', color: 'white'}} prefetch="true">
                     <div className="quote">
-                    <div className="quote1">The journey of a thousand miles</div>
-                    <div className="quote2">begins with a single step.</div>
+                    <div className="quote1">A journey of a thousand miles</div>
+                    <div className="quote2">starts with a single step.</div>
                     </div>
                 </Link>
             </div>

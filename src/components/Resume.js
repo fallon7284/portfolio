@@ -4,8 +4,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 const Resume = require('../images/BrendanFallon.pdf')
 
 
+
 export default () => {
-    console.log(Resume)
     return (
         <div className="resume">
             <MuiThemeProvider>

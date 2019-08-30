@@ -15,8 +15,6 @@ export default class Contact extends React.Component{
         }
     }
 
-
-    
     
     handleChange = (e) => {
         this.setState({[e.target.name]: e.target.value})
@@ -25,7 +23,6 @@ export default class Contact extends React.Component{
     handleSubmit = (e) => {
         const { name, email, message } = this.state
         this.setState({messages: [...this.state.messages, {name, email, message}], name: '', email: '', message: ''})
-        // this.setState({name: '', email: '', message: ''})
     }
 
     isEmail = (email) => {
@@ -37,18 +34,21 @@ export default class Contact extends React.Component{
         const {name, email, message} = this.state
         const messageValid = (name.length > 0 && email.length > 0 && this.isEmail(email) && message)
         return (
-            <div className="contact">
+            <div>
                 <MuiThemeProvider>
                     <TopBar/>
                 </MuiThemeProvider>
-                <div className="form">
-                    <ContactForm handleSubmit={this.handleSubmit} messageValid={messageValid} handleChange={this.handleChange} state={this.state}/>
-                </div>
-                <a href="mailto:brendanc.fallon@gmail.com" rel="noopener noreferrer">Shoot me an email</a>
-                <div className="messages">
-                        {this.state.messages.map((m, i) => {
-                            return <div key={i}>{`${m.name} at ${m.email} says ${m.message}`}</div>
-                        })}
+                <div className="contact">
+                    {/* <div className="section"> */}
+                        <div className="form">
+                            <ContactForm handleSubmit={this.handleSubmit} messageValid={messageValid} handleChange={this.handleChange} state={this.state}/>
+                        </div>
+                        <div className="messages">
+                                {this.state.messages.map((m, i) => {
+                                    return <div key={i}>{`${m.name} at ${m.email} says ${m.message}`}</div>
+                                })}
+                        </div>
+                    {/* </div> */}
                 </div>
             </div>
         )

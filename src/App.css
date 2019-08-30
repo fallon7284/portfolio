@@ -11,6 +11,10 @@
   pointer-events: none;
 }
 
+button:hover{
+  cursor: pointer;
+}
+
 /* this is my resume section */
 
 .resume{
@@ -33,9 +37,16 @@ iframe{
   width: 100%;
   font-size: 3em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-evenly;
   position: fixed;
   top: 15%;
+}
+
+.contact .section{
+  height: 50vh;
+  border: 2px solid blue;
+  width: 45%;
 }
 
 /* .form{
@@ -115,23 +126,28 @@ iframe{
 /* this is my bio section */
 
 .section{
+  font-family: verdana;
   position: relative;
-  top: 15%;
-  font-size: 7vh;
+  font-size: 7.5vh;
   color: white;
+  /* color: rgb(206, 234, 238); */
   z-index: 1;
   text-decoration: none;
+  padding: 7%;
+  padding-left: 9%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  animation-name: biofade;
+  animation-duration: 1s;
 }
 
-#one{
-  top: 10%
-}
 
 .bio{
   position: relative;
   height: 100vh;
-  /* background: url('../src/images/fsa.jpg'); */
-  background-color: rgba(39, 41, 48, .9);
+  background: url('../src/images/software.jpg');
+  /* background-color: rgba(0, 0, 0, 0.9); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -139,8 +155,6 @@ iframe{
   display: flex;
   flex-direction: column;
   z-index: 1;
-  /* overflow-x: hidden;
-  overflow-y: auto; */
 }
 
 .bio-content{
@@ -148,13 +162,15 @@ iframe{
   width: 85%;
   height: 80%;
   transform: translate(9%);
-  /* background-color: rgba(139, 139, 139, 0.5); */
-  top: 12%;
+  background-color: rgba(5, 5, 5, 0.918);
+  text-align: left;
+  /* background-color: rgba(226, 226, 226, 0.8); */
+  top: 14%;
   left: 0%;
-  animation-name: bioslide;
-  animation-duration: 1s;
-  color: black;
-
+  text-decoration: none;
+  border: 1px solid rgba(60, 240, 260);
+  border-radius: 5px;
+  opacity: 1;
 }
 
 
@@ -175,8 +191,11 @@ iframe{
 .thumb{
   height: 35vh;
   width: 85%;
-  background-color: rgba(39, 41, 48, .9);
+  border: 2px solid rgb(185, 185, 185);
+  border-radius: 7px;
+  background-color: rgba(39, 41, 48, .8);
   /* background-color: rgb(209, 209, 209, .8); */
+  /* background-color: black; */
   margin: 6px;
   padding: 1.5vh;
   font-family: futura;
@@ -189,7 +208,7 @@ iframe{
 }
 
 /* .thumb {  } */
-.thumb:hover { transform: scale(1.005); }
+.thumb:hover { background-color: rgba(62, 64, 70, 0.8); }
 
 
 .project{
@@ -202,6 +221,7 @@ iframe{
   width: 100%;
   height: 100%;
   justify-content: space-evenly;
+  filter: none
 }
 
 .details{
@@ -239,7 +259,7 @@ hr{
 }
 
 .project-list{
-  background: url('../src/images/bwOutdoor.jpg') no-repeat center center fixed;
+  background: url('../src/images/fsa.png') no-repeat center center fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -296,14 +316,16 @@ hr{
   }
 }
 
-@keyframes bioslide {
+@keyframes biofade {
   from {
-    top: 100%;
-    bottom:200%;
+    opacity: 0
+    /* top: 100%;
+    bottom:200%; */
   }
   to {
-    top: 12%;
-    bottom: 100%
+    opacity: 1
+    /* top: 12%;
+    bottom: 100% */
   }
 }
 
