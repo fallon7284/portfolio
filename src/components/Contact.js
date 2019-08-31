@@ -3,15 +3,33 @@ import TopBar from './topBar'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import FaLinkedin from 'react-icons/fa'
 import ContactForm from './ContactForm'
+import Message from './Message'
+import axios from 'axios'
 
 export default class Contact extends React.Component{
     constructor(){
         super()
         this.state = {
-            name: '',
-            email: '',
+            userName: '',
+            userEmail: '',
             message: '',
+            isReplyTo: null,
             messages: []
+        }
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
+
+    componentDidMount(){
+        this.getComments()
+    }
+
+
+    async getComments(){
+        try{
+            const { data } = await axios.get('http://localhost:5000')
+            this.setState({messages: [...data]})
+        } catch(error){
+            console.log(error)
         }
     }
 
@@ -20,9 +38,16 @@ export default class Contact extends React.Component{
         this.setState({[e.target.name]: e.target.value})
     }
 
-    handleSubmit = (e) => {
-        const { name, email, message } = this.state
-        this.setState({messages: [...this.state.messages, {name, email, message}], name: '', email: '', message: ''})
+    async handleSubmit(e){
+        const { userName, userEmail, message, isReplyTo } = this.state
+        const body = { userName, userEmail, message, isReplyTo }
+        try {
+            const { data } = await axios.post('http://localhost:5000', body)
+            console.log(body, data)
+            this.setState({messages: [...this.state.messages, data]})
+        } catch(error){
+            console.log(error)
+        }
     }
 
     isEmail = (email) => {
@@ -31,8 +56,9 @@ export default class Contact extends React.Component{
     }
 
     render(){
-        const {name, email, message} = this.state
-        const messageValid = (name.length > 0 && email.length > 0 && this.isEmail(email) && message)
+        const {userName, userEmail, message} = this.state
+        const messageValid = (userName.length > 0 && userEmail.length > 0 && !!this.isEmail(userEmail) && !!message)
+        console.log(messageValid)
         return (
             <div>
                 <MuiThemeProvider>
@@ -41,11 +67,23 @@ export default class Contact extends React.Component{
                 <div className="contact">
                     {/* <div className="section"> */}
                         <div className="form">
-                            <ContactForm handleSubmit={this.handleSubmit} messageValid={messageValid} handleChange={this.handleChange} state={this.state}/>
+                            <ContactForm 
+                                handleSubmit={this.handleSubmit} 
+                                messageValid={messageValid} 
+                                handleChange={this.handleChange} 
+                                state={this.state}
+                            />
                         </div>
                         <div className="messages">
-                                {this.state.messages.map((m, i) => {
-                                    return <div key={i}>{`${m.name} at ${m.email} says ${m.message}`}</div>
+                                {this.state.messages.map((m) => {
+                                    return <Message 
+                                        key={m.id} 
+                                        message={m.message} 
+                                        userName={m.userName}
+                                        userEmail={m.userEmail}
+                                        createdAt={m.createdAt}
+                                        isReplyTo={m.isReplyTo}
+                                    />
                                 })}
                         </div>
                     {/* </div> */}

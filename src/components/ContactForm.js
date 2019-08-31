@@ -14,12 +14,13 @@ const styles = {
 
 export default ({messageValid, state, handleChange, handleSubmit}) => {
     return (
-        <form className="form" onSubmit={(e) => {
+        <form onSubmit={(e) => {
             e.preventDefault()
             handleSubmit()
             }}>
+            { messageValid && <button type="submit">Submit</button>}
             <TextField 
-                name="name" 
+                name="userName" 
                 label="Your Name" 
                 value={state.name} 
                 onChange={handleChange}
@@ -27,7 +28,7 @@ export default ({messageValid, state, handleChange, handleSubmit}) => {
                 style={styles.input}
             />
             <TextField 
-                name="email" 
+                name="userEmail" 
                 label="Your Email Address" 
                 value={state.email} 
                 onChange={handleChange}
@@ -44,7 +45,6 @@ export default ({messageValid, state, handleChange, handleSubmit}) => {
                 rowsMax="10"
                 style={styles.message}
             />
-            {messageValid && <button type="submit">Submit</button>}
         </form>
     )
 }

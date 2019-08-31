@@ -28,4 +28,10 @@ module.exports = [
         deployed: 'https://sellinbags.herokuapp.com',
         github: 'https://github.com/graceshoppingbags/sellinbags',
     },
+    {
+        name: 'Like what you see?',
+        image: require('/Users/brendanfallon/projects/portfolio/src/components/happy.gif'),
+        description: 'I\'d love to hear from you.  Click contact above to leave a comment or to send me an email.',
+        github: 'http://github.com/fallon7284'
+    }
 ]

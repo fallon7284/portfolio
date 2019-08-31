@@ -38,6 +38,7 @@ const styles = {
 export default () => {
     const resume = window.location.pathname === '/resume' ? 
             <Button 
+                className="button"
                 style={styles.button} 
                 href={Resume}
                 download
@@ -45,6 +46,7 @@ export default () => {
                 <Typography style={{...styles.typography, color: 'rgb(60, 240, 260)'}}>Download</Typography>
             </Button> :
             <Button 
+                className="button"
                 style={styles.button} 
                 component={Link} 
                 to={'/resume'}
@@ -54,6 +56,7 @@ export default () => {
             </Button>
     const contact = window.location.pathname === '/contact' ?
             <Button 
+                className="button"
                 style={styles.button} 
                 href="mailto:brendanc.fallon@gmail.com" 
                 rel="noopener noreferrer"
@@ -61,6 +64,7 @@ export default () => {
                 <Typography style={{...styles.typography, color: 'rgb(60, 240, 260)'}}>Email</Typography>
             </Button> :
             <Button 
+                className="button"
                 style={styles.button} 
                 component={Link} 
                 to={'/contact'}
@@ -75,6 +79,7 @@ export default () => {
             style={styles.appBar}
         >
             <Button 
+                className="button"
                 style={styles.button} 
                 component={Link} 
                 to={'/'}
@@ -86,6 +91,7 @@ export default () => {
                 {resume}
                 {contact}
                 <Button 
+                    className="button"
                     style={styles.button} 
                     component={Link} 
                     to={'/projects'}
@@ -94,6 +100,7 @@ export default () => {
                     <Typography style={{...styles.typography, color: window.location.pathname === '/projects' ? 'rgb(185, 185, 185)' : styles.typography.color}}>Projects</Typography>
                 </Button>
                 <Button 
+                    className="button"
                     style={styles.button} 
                     component={Link} 
                     to={'/bio'}
