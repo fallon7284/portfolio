@@ -35,48 +35,99 @@ iframe{
 .messages{
   margin-top: 10vh;
   overflow-y: auto;
-  width: 30%;
+  width: 50%;
   border: 1px solid grey;
-  background-color: blue;
+  margin-bottom: 5vh;
+  /* background-color: blue; */
   /* padding: 5vw; */
 }
 
 .message{
-  font-size: 12px;
+  font-size: 16px;
+  border-radius: 3vh;
+  margin: 2px;
+  background-color: #909090
+}
+
+.message:hover{
+  background-color: #808080;
 }
 
 .message-reply{
-  color: red
+  font-size: 12px;
+  background-color: red
+}
+
+.name-date{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: #303030;
+}
+
+.replies{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around
+}
+
+.replies div{
+  color: blue;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .contact{
   height: 100%;
   width: 100%;
   font-size: 3em;
+  color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   position: fixed;
-  background-color: green;
+  background-color: #303030;
+}
+
+.contact-left{
+  margin-top: 10vh;
+  width: 30%;
+  font-size: .5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
 
-.form{
+.form-area{
   margin-top: 10vh;
   height: 60%;
-  width: 30%;
+  width: 100%;
   left: 20vw;
   border: black 2px solid;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  background-color: red;
+  /* background-color: red; */
+  margin-bottom: 5vh;
 }
 
-.form input{
+.form-area input{
   width: 100%;
   justify-self: center;
+}
+
+.message-content{
+  width: 80%;
+  /* height: 120px; */
+  justify-content: center;
+  text-align: start;
+  background-color: #999999;
+  /* padding-left: 15px; */
+  padding-right: 15px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /* this is my home section */

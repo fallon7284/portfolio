@@ -4,7 +4,9 @@ import TextField from '@material-ui/core/TextField'
 const styles = {
     input: {
         height: "20vh",
-        width: "100%"
+        width: "100%",
+        backgroundColor: '#303030',
+        color: '#303030'
     },
     message: {
         height: "40vh",
@@ -12,9 +14,10 @@ const styles = {
     }
 }
 
-export default ({messageValid, state, handleChange, handleSubmit}) => {
+export default ({messageValid, state, handleChange, handleSubmit, replyName, closeContact}) => {
     return (
-        <form onSubmit={(e) => {
+        <div>{replyName.length > 0 && <div><div style={{color: 'red', borderRadius: '20px', cursor: 'pointer', backgroundColor: 'black'}} onClick={closeContact}>X</div>{`replying to ${replyName}`}</div>}
+            <form onSubmit={(e) => {
             e.preventDefault()
             handleSubmit()
             }}>
@@ -45,7 +48,8 @@ export default ({messageValid, state, handleChange, handleSubmit}) => {
                 rowsMax="10"
                 style={styles.message}
             />
-        </form>
+            </form>
+        </div>
     )
 }
 
