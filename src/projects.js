@@ -22,15 +22,23 @@ module.exports = [
     },
     {
         name: 'Grace Shopper',
-        image: require('/Users/brendanfallon/projects/portfolio/src/images/Screen Shot 2019-08-27 at 2.45.26 PM.png'),
+        image: require('../src/images/graceShopper.png'),
         description: 'The first team project from my time at Fullstack Academy,' +  
         'Grace Shopper was a Full Stack mock e-commerce web application.',
         deployed: 'https://sellinbags.herokuapp.com',
         github: 'https://github.com/graceshoppingbags/sellinbags',
     },
     {
+        name: 'This Portfolio Site!',
+        image: require('../src/images/portfolioScreen.png'),
+        description: 'This site was created with Create React App along with a Node/Express backend to allow for the comments section' +  
+        ' which includes the ability to reply to comments. Style is almost entirely CSS other than the top bar component and the message form inputs.',
+        // deployed: 'https://sellinbags.herokuapp.com',
+        github: 'https://github.com/fallon7284/portfolio',
+    },
+    {
         name: 'Like what you see?',
-        image: require('/Users/brendanfallon/projects/portfolio/src/components/happy.gif'),
+        image: require('../src/components/happy.gif'),
         description: 'I\'d love to hear from you.  Click contact above to leave a comment or to send me an email.',
         github: 'http://github.com/fallon7284'
     }

@@ -14,7 +14,7 @@ export default class Contact extends React.Component{
             userEmail: '',
             message: '',
             isReplyTo: null,
-            replyName: '',
+            replyingTo: {name: '', message: ''},
             messages: [],
             commenting: false
         }
@@ -41,16 +41,22 @@ export default class Contact extends React.Component{
     }
 
     comment = () => {
-        this.setState({commenting: true, isReplyTo: null, replyName: ''})
+        this.setState({commenting: !this.state.commenting, isReplyTo: null})
     }
 
     closeContact = () => {
-        this.setState({commenting: false, isReplyTo: null, replyName: ''})
+        this.setState({commenting: false, isReplyTo: null, replyingTo: {name: '', message: ''}})
     }
 
-    reply = (name, id) => {
-        console.log(name, id, 'REPLYING')
-        this.setState({commenting: true, isReplyTo: id, replyName: name})
+    reply = (name, message, id) => {
+        const ellipse = message.length > 20 ? '...' : ''
+        message = message.slice(0, 20) + ellipse
+        console.log(name, message)
+        this.setState({commenting: true, isReplyTo: id, replyingTo: {name, message}})
+    }
+
+    messageValid = (userName, userEmail, message) => {
+        return (userName.length > 0 && userEmail.length > 0 && !!this.isEmail(userEmail) && !!message)
     }
 
     async handleSubmit(e){
@@ -70,7 +76,6 @@ export default class Contact extends React.Component{
                 })
             }
             else messages = [...this.state.messages, data]
-            console.log(data, messages, 'messages adding to state')
             this.setState({
                 messages: [...messages], 
                 userEmail: '',
@@ -91,7 +96,6 @@ export default class Contact extends React.Component{
 
     render(){
         const { userName, userEmail, message } = this.state
-        const messageValid = (userName.length > 0 && userEmail.length > 0 && !!this.isEmail(userEmail) && !!message)
         return (
             <div>
                 <MuiThemeProvider>
@@ -99,31 +103,41 @@ export default class Contact extends React.Component{
                 </MuiThemeProvider>
                 <div className="contact">
                     <div className="contact-left">
-                        <div class-name="contact-me">
+                        <div className="contact-me">
                         If you'd like to get in touch with me, you can
                         leave a message below, or click the email button in the top bar.  
                         I'd love to hear from you.
-                        <button onClick={this.comment}>Leave a Comment</button>
                         </div>
+                        <button 
+                            style={{
+                                height: '10vh',
+                                backgroundImage: 'linear-gradient(to top, black, #303030)', 
+                                marginTop: '2vh', 
+                                color: 'white', 
+                                fontFamily: 'futura', 
+                                fontSize: '14px'}} 
+                            onClick={() => {
+                                this.comment()
+                                console.log(this.state)
+                                }}>Leave a Comment</button>
                         <div className="form-area">
                         {this.state.commenting &&
                             <ContactForm 
                                 closeContact={this.closeContact}
-                                replyName={this.state.replyName}
+                                replyingTo={this.state.replyingTo}
                                 className="comment-form"
                                 handleSubmit={this.handleSubmit} 
-                                messageValid={messageValid} 
+                                messageValid={this.messageValid(userName, userEmail, message)} 
                                 handleChange={this.handleChange} 
                                 state={this.state}
                             />}
                         </div>
                     </div>
                     <div className="messages">
+                            <div className="comments-title">COMMENTS</div>
                             {this.state.messages.map((m) => {
-                                console.log(m)
                                 return <Message 
-                                    // replyClick={this.reply.bind(this)}
-                                    replyClick={() => this.reply(m.userName, m.id)}
+                                    replyClick={() => this.reply(m.userName, m.message, m.id)}
                                     key={m.id} 
                                     number={m.id}
                                     message={m.message} 

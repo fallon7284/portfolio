@@ -32,26 +32,34 @@ iframe{
 
 /* this is my contact section */
 
+.comments-title{
+  background-image: linear-gradient(to top, black, #303030);
+  font-family: futura;
+  /* border-radius: 15px; */
+}
+
 .messages{
   margin-top: 10vh;
   overflow-y: auto;
   width: 50%;
-  border: 1px solid grey;
   margin-bottom: 5vh;
-  /* background-color: blue; */
-  /* padding: 5vw; */
+  background-color: white;
+  border-radius: 20px
 }
 
 .message{
   font-size: 16px;
   border-radius: 3vh;
   margin: 2px;
-  background-color: #909090
+  background-color: #cecece;
+  color: black;
 }
 
-.message:hover{
+
+/* .message-area:hover{
   background-color: #808080;
-}
+} */
+
 
 .message-reply{
   font-size: 12px;
@@ -62,13 +70,18 @@ iframe{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  color: #303030;
+  color: black;
 }
 
 .replies{
   display: flex;
   flex-direction: row;
-  justify-content: space-around
+  justify-content: space-between;
+  font-size: 16px;
+  border-radius: 3vh;
+  margin: 2px;
+  padding-left: 12%;
+  padding-right: 12%;
 }
 
 .replies div{
@@ -98,6 +111,10 @@ iframe{
   justify-content: space-between;
 }
 
+.contact-me{
+  background-image: linear-gradient(to top, black, #303030);
+}
+
 
 
 .form-area{
@@ -105,25 +122,25 @@ iframe{
   height: 60%;
   width: 100%;
   left: 20vw;
-  border: black 2px solid;
+  /* border: black 2px solid; */
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  /* background-color: red; */
+  justify-content: flex-end;
+  /* background-color: white; */
   margin-bottom: 5vh;
 }
 
-.form-area input{
+/* .form-area input{
   width: 100%;
   justify-self: center;
-}
+  background-color: white;
+} */
 
 .message-content{
   width: 80%;
   /* height: 120px; */
   justify-content: center;
   text-align: start;
-  background-color: #999999;
   /* padding-left: 15px; */
   padding-right: 15px;
   margin-left: 10%;
@@ -241,7 +258,7 @@ iframe{
 }
 
 
-.cartoon{
+/* .cartoon{
   height: 30px;
   width: 30px;
   position: fixed;
@@ -249,7 +266,7 @@ iframe{
   left: 50%;
   background-image: url('/Users/brendanfallon/projects/portfolio/src/images/constructionCartoon.jpg');
   z-index: 999;
-}
+} */
 
 
 /* this is my project section */

@@ -3,8 +3,9 @@ import React from 'react'
 export default ({ userName, createdAt, message, replyName }) => {
     const date = new Date(createdAt).toDateString()
     const replyString = (replyName !== undefined) ? `${userName} replied to ${replyName}: ` : ''
+    const style = replyName ? {width: '80%', alignSelf: 'right'} : {}
     return (
-        <div className="message">
+        <div className="message" style={style}>
             <div className="name-date">
                 <div>{userName}</div>
                 <div>{date}</div>
