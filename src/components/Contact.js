@@ -28,7 +28,7 @@ export default class Contact extends React.Component{
 
     async getComments(){
         try{
-            const { data } = await axios.get('http://localhost:5000/comments')
+            const { data } = await axios.get('http://portfolio-comments.herokuapp.com/comments')
             this.setState({messages: data})
         } catch(error){
             console.log(error)
@@ -64,7 +64,7 @@ export default class Contact extends React.Component{
         const body = { userName, userEmail, message, isReplyTo, replies: [] }
         console.log('submitting', body)
         try {
-            const { data } = await axios.post('http://localhost:5000', body)
+            const { data } = await axios.post('http://portfolio-comments.herokuapp.com/comments', body)
             let messages
             if (data.isReplyTo){
                 messages = this.state.messages.map(m => {

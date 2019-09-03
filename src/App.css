@@ -1,3 +1,8 @@
+@font-face{
+  font-family: bungee;
+  src: url('https://fonts.googleapis.com/css?family=Bungee Shade')
+}
+
 .App {
   text-align: center;
   display: flex;
@@ -14,6 +19,8 @@
 button:hover{
   cursor: pointer;
 }
+
+
 
 /* this is my resume section */
 
@@ -34,7 +41,8 @@ iframe{
 
 .comments-title{
   background-image: linear-gradient(to top, black, #303030);
-  font-family: futura, open sans condensed;
+  /* font-family: futura, open sans condensed; */
+  font-family: bungee;
   /* border-radius: 15px; */
 }
 
@@ -282,7 +290,7 @@ iframe{
   /* background-color: black; */
   margin: 6px;
   padding: 1.5vh;
-  font-family: futura, open sans condensed;
+  font-family: futura, Montserrat;
   font-size: 2.5em;
   color: white;
   margin-bottom: 3%;
