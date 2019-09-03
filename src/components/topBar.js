@@ -9,7 +9,7 @@ const Resume = require('../images/BrendanFallon.pdf')
 
 const styles = {
     appBar: {
-        fontFamily: 'futura', 
+        fontFamily: 'futura, open sans condensed', 
         backgroundColor: 'black', 
         display: 'flex', 
         flexDirection: 'row',
@@ -22,7 +22,7 @@ const styles = {
         alignItems: 'left'
     },
     typography: {
-        fontFamily: 'futura', 
+        fontFamily: 'futura, open sans condensed', 
         color: "white"
     },
     links: {

@@ -6,7 +6,7 @@ const styles = {
         width: "100%",
         backgroundColor: '#cecece',
         color: 'white',
-        fontFamily: 'futura'
+        fontFamily: 'futura, open sans condensed'
     },
     message: {
         height: "40vh",
@@ -49,7 +49,7 @@ export default ({messageValid, state, handleChange, handleSubmit, replyingTo, cl
                 // rowsMax="10"
                 style={styles.input}
             />
-            { messageValid && <button type="submit" style={{height: '10vh', backgroundImage: 'linear-gradient(to top, black, #303030)', marginTop: '2vh', color: 'white', fontFamily: 'futura', fontSize: '14px', width: '100%'}}>Submit</button>}
+            { messageValid && <button type="submit" style={{height: '10vh', backgroundImage: 'linear-gradient(to top, black, #303030)', marginTop: '2vh', color: 'white', fontFamily: 'futura, open sans condensed', fontSize: '14px', width: '100%'}}>Submit</button>}
             </form>
         </div>
     )

@@ -28,7 +28,7 @@ export default class Contact extends React.Component{
 
     async getComments(){
         try{
-            const { data } = await axios.get('http://localhost:5000')
+            const { data } = await axios.get('http://localhost:5000/comments')
             this.setState({messages: data})
         } catch(error){
             console.log(error)
@@ -114,7 +114,7 @@ export default class Contact extends React.Component{
                                 backgroundImage: 'linear-gradient(to top, black, #303030)', 
                                 marginTop: '2vh', 
                                 color: 'white', 
-                                fontFamily: 'futura', 
+                                fontFamily: 'futura, open sans condensed', 
                                 fontSize: '14px'}} 
                             onClick={() => {
                                 this.comment()
