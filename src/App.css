@@ -1,7 +1,7 @@
-@font-face{
+/* @font-face{
   font-family: bungee;
   src: url('https://fonts.googleapis.com/css?family=Bungee Shade')
-}
+} */
 
 .App {
   text-align: center;
@@ -41,8 +41,8 @@ iframe{
 
 .comments-title{
   background-image: linear-gradient(to top, black, #303030);
-  /* font-family: futura, open sans condensed; */
-  font-family: bungee;
+  font-family: futura, open sans condensed;
+  /* font-family: bungee; */
   /* border-radius: 15px; */
 }
 
