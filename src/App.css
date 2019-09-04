@@ -222,7 +222,6 @@ iframe{
 .section{
   font-family: verdana;
   position: relative;
-  /* font-size: 4vw; */
   font-size: calc(26px + (50 - 26) * ((100vw - 300px) / (1600 - 300)));
   color: white;
   z-index: 1;
