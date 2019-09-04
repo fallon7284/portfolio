@@ -38,7 +38,7 @@ module.exports = [
     },
     {
         name: 'Like what you see?',
-        image: require('../src/components/happy.gif'),
+        image: require('../src/images/happy.gif'),
         description: 'I\'d love to hear from you.  Click contact above to leave a comment or to send me an email.',
         github: 'http://github.com/fallon7284'
     }

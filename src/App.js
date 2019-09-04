@@ -10,7 +10,11 @@ import {
  } from '../src/components'
 import './App.css';
 
-
+const wakeApi = async () => {
+  const data = await fetch('https://portfolio-comments.herokuapp.com/comments')
+  const json = await data.json()
+  return json
+}
 
 function App() {
   return (
@@ -21,7 +25,6 @@ function App() {
       <Route path="/bio" component={Bio}/>
       <Route path="/contact" component={Contact}/>
       <Route path="/resume" component={Resume} />
-      {/* <Route path = "/insta" component={Insta}/> */}
     </Router>
     </div>
   );

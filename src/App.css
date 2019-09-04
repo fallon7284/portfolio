@@ -3,6 +3,19 @@
   src: url('https://fonts.googleapis.com/css?family=Bungee Shade')
 } */
 
+@media only screen and (max-width: 500px) {
+  .thumb .project-body {
+    flex-direction: column-reverse;
+  }
+  .thumb .details{
+    width: 100%;
+  }
+  .thumb {
+    height: 50vh;
+  }
+}
+
+
 .App {
   text-align: center;
   display: flex;
@@ -159,7 +172,7 @@ iframe{
   position: fixed;
   font-family: open-sans;
   /* font-size: 5vw; */
-  font-size: calc(30px + (70 - 30) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(25px + (70 - 25) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 500;
   color: rgb(117, 113, 113);
   text-decoration: none;
@@ -179,7 +192,7 @@ iframe{
   left: 60%;
   transform: translate(-50%, -50%);
   animation-name: quoteslide;
-  animation-duration: 6s;
+  animation-duration: 5s;
   text-decoration: none;
   
 }
@@ -192,7 +205,7 @@ iframe{
   left: 55%;
   transform: translate(-50%, -50%);
   animation-name: quoteslide2;
-  animation-duration: 5.3s;
+  animation-duration: 4.5s;
 }
 
 .quote{
@@ -204,17 +217,6 @@ iframe{
 .home .quote:hover{
   text-shadow: 0 0 10px rgb(139, 226, 241)
 }
-
-/* .brendan-dev{
-  position: fixed;
-  color: rgb(230, 230, 230);
-  top: 55%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  text-align: left;
-} */
-
 
 
 /* this is my bio section */
@@ -256,7 +258,6 @@ iframe{
   transform: translate(9%);
   background-color: rgba(5, 5, 5, 0.918);
   text-align: left;
-  /* background-color: rgba(226, 226, 226, 0.8); */
   top: 14%;
   left: 0%;
   text-decoration: none;
@@ -266,28 +267,16 @@ iframe{
 }
 
 
-/* .cartoon{
-  height: 30px;
-  width: 30px;
-  position: fixed;
-  top:60%;
-  left: 50%;
-  background-image: url('/Users/brendanfallon/projects/portfolio/src/images/constructionCartoon.jpg');
-  z-index: 999;
-} */
-
 
 /* this is my project section */
 
 
 .thumb{
-  height: 35vh;
+  /* height: 36vh; */
   width: 85%;
   border: 2px solid rgb(185, 185, 185);
   border-radius: 7px;
   background-color: rgba(39, 41, 48, .8);
-  /* background-color: rgb(209, 209, 209, .8); */
-  /* background-color: black; */
   margin: 6px;
   padding: 1.5vh;
   font-family: futura, Montserrat;
@@ -296,7 +285,7 @@ iframe{
   margin-bottom: 3%;
   display: flex;
   flex-direction: column;
-  transition: all .2s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 /* .thumb {  } */
@@ -323,8 +312,9 @@ iframe{
   justify-content: space-between;
   overflow: hidden;
   height: 100%;
-  top: 2%;
+  top: 1%;
   bottom: 2%;
+  font-size: calc(20px + (45 - 20) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .details .description{
@@ -332,6 +322,7 @@ iframe{
   padding-right: 10%;
   padding-left: 8%;
   align-self: center;
+  font-size: 1.6vh;
 }
 
 .details img{
@@ -342,9 +333,6 @@ iframe{
   object-fit: contain;
 }
 
-.thumb p{
-  font-size: 1.6vh;
-}
 
 hr{
   width: 75%
@@ -367,16 +355,6 @@ hr{
 }
 
 
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
 
 .App-link {
   color: #61dafb;
