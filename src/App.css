@@ -158,7 +158,8 @@ iframe{
   background-size: cover; 
   position: fixed;
   font-family: open-sans;
-  font-size: 5vw;
+  /* font-size: 5vw; */
+  font-size: calc(30px + (70 - 30) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 500;
   color: rgb(117, 113, 113);
   text-decoration: none;
@@ -175,7 +176,7 @@ iframe{
   display: flex;
   flex-direction: row;
   top: 15%;
-  left: 65%;
+  left: 60%;
   transform: translate(-50%, -50%);
   animation-name: quoteslide;
   animation-duration: 6s;
@@ -188,7 +189,7 @@ iframe{
   width: 100%;
   position: fixed;
   top: 22%;
-  left: 70%;
+  left: 55%;
   transform: translate(-50%, -50%);
   animation-name: quoteslide2;
   animation-duration: 5.3s;
@@ -201,8 +202,18 @@ iframe{
 }
 
 .home .quote:hover{
-  text-shadow: 0 0 10px rgb(230, 230, 230)
+  text-shadow: 0 0 10px rgb(139, 226, 241)
 }
+
+/* .brendan-dev{
+  position: fixed;
+  color: rgb(230, 230, 230);
+  top: 55%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: left;
+} */
 
 
 
@@ -212,11 +223,11 @@ iframe{
   font-family: verdana;
   position: relative;
   /* font-size: 4vw; */
-  font-size: calc(22px + (45 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(26px + (50 - 26) * ((100vw - 300px) / (1600 - 300)));
   color: white;
   z-index: 1;
   text-decoration: none;
-  padding: 7%;
+  padding: 5%;
   padding-left: 9%;
   display: flex;
   flex-direction: column;
@@ -230,7 +241,6 @@ iframe{
   position: relative;
   height: 100vh;
   background: url('../src/images/software.jpg');
-  /* background-color: rgba(0, 0, 0, 0.9); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
