@@ -13,10 +13,12 @@ import './App.css';
 const wakeApi = async () => {
   const data = await fetch('https://portfolio-comments.herokuapp.com/comments')
   const json = await data.json()
+  console.log(json)
   return json
 }
 
 function App() {
+  wakeApi()
   return (
     <div className="App">
       <Router>
