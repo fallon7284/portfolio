@@ -27,8 +27,10 @@ const styles = {
     },
     links: {
         display: 'flex',
-        flexDirection: 'row-reverse',
-        paddingRight: '15px'
+        flexDirection: 'row',
+        paddingRight: '15px',
+        textAlign: 'center',
+        flexWrap: 'wrap' 
     }
 }
 
@@ -88,26 +90,26 @@ export default () => {
                 <Typography style={{...styles.typography, fontSize: '2em'}}>Brendan Fallon</Typography>
             </Button>
             <div style={styles.links}>
-                {resume}
-                {contact}
-                <Button 
-                    className="button"
-                    style={styles.button} 
-                    component={Link} 
-                    to={'/projects'}
-                    prefetch="true"
-                >
-                    <Typography style={{...styles.typography, color: window.location.pathname === '/projects' ? 'rgb(185, 185, 185)' : styles.typography.color}}>Projects</Typography>
-                </Button>
                 <Button 
                     className="button"
                     style={styles.button} 
                     component={Link} 
                     to={'/bio'}
                     prefetch="true"
-                >
+                    >
                     <Typography style={{...styles.typography, color: window.location.pathname === '/bio' ? 'rgb(185, 185, 185)' : styles.typography.color}}>Bio</Typography>
                 </Button>            
+                <Button 
+                    className="button"
+                    style={styles.button} 
+                    component={Link} 
+                    to={'/projects'}
+                    prefetch="true"
+                    >
+                    <Typography style={{...styles.typography, color: window.location.pathname === '/projects' ? 'rgb(185, 185, 185)' : styles.typography.color}}>Projects</Typography>
+                </Button>
+                {contact}
+                {resume}
             </div>
         </AppBar>
     )
