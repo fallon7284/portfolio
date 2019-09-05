@@ -6,7 +6,7 @@ export default ({story, clickLink, part}) => {
     console.log(one, two, story, part)
     return (
         <div key={part} className="bio-content">
-            <Typing speed={25}>
+            <Typing speed={18}>
             <div className="section" onClick={clickLink} style={{cursor: 'pointer'}}>
             {one}
             <Typing.Delay ms={1100}/>
