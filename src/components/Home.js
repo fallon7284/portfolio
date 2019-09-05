@@ -10,10 +10,10 @@ export default () => {
                 <Link to="/bio" style={{textDecoration: 'none', color: 'white'}} prefetch="true">
                     <div className="quote">
                         <div className="quote1">
-                            Brendan Fallon
+                            BRENDAN FALLON
                         </div>
                         <div className="quote2">
-                            Fullstack Software Engineer
+                            FULLSTACK SOFTWARE ENGINEER
                         </div>
                     </div>
                 </Link>

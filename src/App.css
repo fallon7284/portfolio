@@ -159,7 +159,7 @@ iframe{
   background-repeat: no-repeat;
   background-size: cover; 
   position: fixed;
-  font-family: open-sans;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: calc(25px + (70 - 25) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 500;
   color: rgb(117, 113, 113);
@@ -212,7 +212,7 @@ iframe{
 .section{
   font-family: verdana;
   position: relative;
-  font-size: calc(22px + (55 - 22) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(19px + (55 - 19) * ((100vw - 250px) / (1600 - 250)));
   color: white;
   z-index: 1;
   text-decoration: none;
@@ -221,8 +221,8 @@ iframe{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  animation-name: biofade;
-  animation-duration: .7s;
+  /* animation-name: biofade;
+  animation-duration: .7s; */
 }
 
 
@@ -244,7 +244,7 @@ iframe{
   width: 85%;
   /* height: 80%; */
   transform: translate(9%);
-  background-color: rgba(5, 5, 5, 0.918);
+  background-color: rgba(5, 5, 5);
   text-align: left;
   top: 8em;
   left: 0%;

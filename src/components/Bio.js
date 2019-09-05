@@ -12,8 +12,8 @@ export default class Bio extends React.Component{
             canClickToProjects: false
         }
         this.incrementStoryPart = this.incrementStoryPart.bind(this)
-        this.story = ['I took the first step on my journey to Software Development in late 2018, enrolling in one-week bootcamp prep course at Fullstack Academy. The day after the course ended I resigned from the job where I had spent nine years and enrolled in Fullstack Academy.',
-        'At Fullstack I discovered a passion and talent for problem solving, and I found a community of smart, curious people who shared my excitedment about these challenges. Here are some of the things that we built together and some things that I have built since:']
+        this.story = [['I took the first step on my journey to Software Development in late 2018, enrolling in one-week bootcamp prep course at Fullstack Academy.', ' The day after the course ended I resigned from the job where I had spent nine years and enrolled in the full-time immersive program.'],
+        ['At Fullstack I discovered a passion and talent for problem solving, and I found a community of smart, curious people who shared my excitement about solving technical challenges.', ' Here are some of the things that we built together and some things that I have built since:']]
     }
 
     componentDidMount(){
