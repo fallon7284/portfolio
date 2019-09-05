@@ -48,11 +48,12 @@ iframe{
 
 .messages{
   margin-top: 10vh;
-  overflow-y: auto;
+  overflow: auto;
   width: 50%;
   margin-bottom: 5vh;
   background-color: white;
-  border-radius: 20px
+  border-radius: 20px;
+  height: 80vh;
 }
 
 .message{
@@ -97,6 +98,7 @@ iframe{
 
 .contact{
   height: 100%;
+  overflow: scroll;
   width: 100%;
   font-size: 3em;
   color: white;
@@ -109,9 +111,11 @@ iframe{
 
 .contact-left{
   margin-top: 10vh;
+  height: 80vh;
   width: 30%;
   font-size: calc(15px + (45 - 25) * ((100vw - 300px) / (1600 - 300)));
   display: flex;
+  float: left;
   flex-direction: column;
   justify-content: space-between;
   overflow: scroll;
@@ -369,7 +373,22 @@ hr{
   .contact{
     top: 12vh;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+  }
+  .form-area{
+    width: 100%;
+  }
+  .contact-left{
+    /* position: fixed; */
+    display: block;
+    width: 90%;
+    left: 5%;
+  }
+  .messages{
+    /* position: fixed; */
+    display: block;
+    width: 90%;
+    left: 5%;
   }
 }
 
