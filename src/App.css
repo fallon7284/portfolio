@@ -9,9 +9,21 @@
   }
   .thumb .details{
     width: 100%;
+    display: block;
   }
   .thumb {
     height: 50vh;
+  }
+  .contact{
+    top: 12vh;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contact{
+    top: 6vh;
   }
 }
 
@@ -55,8 +67,7 @@ iframe{
 .comments-title{
   background-image: linear-gradient(to top, black, #303030);
   font-family: futura, open sans condensed;
-  /* font-family: bungee; */
-  /* border-radius: 15px; */
+  font-size: calc(25px + (70 - 25) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .messages{
@@ -69,12 +80,14 @@ iframe{
 }
 
 .message{
+  /* font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300))); */
   font-size: 16px;
   border-radius: 3vh;
   margin: 2px;
   background-color: #cecece;
   color: black;
 }
+
 
 
 
@@ -122,10 +135,11 @@ iframe{
 .contact-left{
   margin-top: 10vh;
   width: 30%;
-  font-size: .5em;
+  font-size: calc(15px + (45 - 25) * ((100vw - 300px) / (1600 - 300)));
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: scroll;
 }
 
 .contact-me{
@@ -139,21 +153,17 @@ iframe{
   height: 60%;
   width: 100%;
   left: 20vw;
-  /* border: black 2px solid; */
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  /* background-color: white; */
   margin-bottom: 5vh;
 }
 
 
 .message-content{
   width: 80%;
-  /* height: 120px; */
   justify-content: center;
   text-align: start;
-  /* padding-left: 15px; */
   padding-right: 15px;
   margin-left: 10%;
   margin-right: 10%;
@@ -171,7 +181,6 @@ iframe{
   background-size: cover; 
   position: fixed;
   font-family: open-sans;
-  /* font-size: 5vw; */
   font-size: calc(25px + (70 - 25) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 500;
   color: rgb(117, 113, 113);

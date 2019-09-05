@@ -33,6 +33,7 @@ export default ({p}) => {
                             color: 'white'}}
                         />
                     </a>
+                    <div className="clearfix"></div>
                 </div>
             </div>
         </div>
