@@ -3,30 +3,6 @@
   src: url('https://fonts.googleapis.com/css?family=Bungee Shade')
 } */
 
-@media only screen and (max-width: 500px) {
-  .thumb .project-body {
-    flex-direction: column-reverse;
-  }
-  .thumb .details{
-    width: 100%;
-    display: block;
-  }
-  .thumb {
-    height: 50vh;
-  }
-  .contact{
-    top: 12vh;
-    display: flex;
-    flex-direction: column-reverse;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .contact{
-    top: 6vh;
-  }
-}
-
 
 .App {
   text-align: center;
@@ -80,7 +56,6 @@ iframe{
 }
 
 .message{
-  /* font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300))); */
   font-size: 16px;
   border-radius: 3vh;
   margin: 2px;
@@ -233,7 +208,7 @@ iframe{
 .section{
   font-family: verdana;
   position: relative;
-  font-size: calc(26px + (50 - 26) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(22px + (55 - 22) * ((100vw - 300px) / (1600 - 300)));
   color: white;
   z-index: 1;
   text-decoration: none;
@@ -263,11 +238,11 @@ iframe{
 .bio-content{
   position: fixed;
   width: 85%;
-  height: 80%;
+  /* height: 80%; */
   transform: translate(9%);
   background-color: rgba(5, 5, 5, 0.918);
   text-align: left;
-  top: 14%;
+  top: 8em;
   left: 0%;
   text-decoration: none;
   border: 1px solid rgba(60, 240, 260);
@@ -367,6 +342,35 @@ hr{
 
 .App-link {
   color: #61dafb;
+}
+
+
+
+@media only screen and (max-width: 625px) {
+  .contact{
+    top: 6vh;
+  }
+  .bio-content{
+    top: 12em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .thumb .project-body {
+    flex-direction: column-reverse;
+  }
+  .thumb .details{
+    width: 100%;
+    display: block;
+  }
+  .thumb {
+    height: 50vh;
+  }
+  .contact{
+    top: 12vh;
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 @keyframes quoteslide {
