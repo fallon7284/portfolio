@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField'
 const styles = {
     input: {
         width: "100%",
-        backgroundColor: '#cecece',
+        backgroundColor: 'white',
         color: 'white',
         fontFamily: 'futura, open sans condensed'
     },

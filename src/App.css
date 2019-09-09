@@ -64,8 +64,26 @@ iframe{
   color: black;
 }
 
+.link-icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 8px;
+}
 
+.icons{
+  font-size: 6vh;
+}
 
+.icons:hover{
+  transition-duration: .5s;
+  color: rgb(169, 218, 226)
+}
+
+.link-icons a{
+  text-decoration: none;
+  color: white;
+}
 
 .message-reply{
   font-size: 12px;

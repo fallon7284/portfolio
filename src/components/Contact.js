@@ -1,7 +1,7 @@
 import React from 'react'
 import TopBar from './topBar'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import FaLinkedin from 'react-icons/fa'
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import ContactForm from './ContactForm'
 import Message from './Message'
 import axios from 'axios'
@@ -68,7 +68,6 @@ export default class Contact extends React.Component{
             let messages
             if (data.isReplyTo){
                 messages = this.state.messages.map(m => {
-                    console.log(m)
                     if (m.id === data.isReplyTo){
                         m.replies.push(data)
                     }
@@ -104,6 +103,14 @@ export default class Contact extends React.Component{
                 <div className="contact">
                     <div className="contact-left">
                         <div className="contact-me">
+                        <div className="link-icons">
+                            <a href="http://linkedin.com/in/brendanfallondev" target="blank" rel="noopener noreferrer">
+                                <FaLinkedin className="icons" />
+                            </a>
+                            <a href="http://github.com/fallon7284" target="blank" rel="noopener noreferrer">
+                                <FaGithub className="icons" />
+                            </a>  
+                        </div>
                         If you'd like to get in touch with me, you can
                         leave a message below, or click the email button in the top bar.  
                         I'd love to hear from you.
