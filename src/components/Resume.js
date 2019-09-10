@@ -1,7 +1,7 @@
 import React from 'react'
 import TopBar from './topBar'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-const Resume = require('../images/BrendanFallonResume.pdf')
+const Resume = require('../images/BrendanFallon.pdf')
 
 
 
