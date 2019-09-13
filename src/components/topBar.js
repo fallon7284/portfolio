@@ -9,7 +9,8 @@ const Resume = require('../images/BrendanFallon.pdf')
 
 const styles = {
     appBar: {
-        fontFamily: 'futura, open sans condensed', 
+        fontFamily: 'futura, open sans condensed',
+        float: 'top',
         backgroundColor: 'black', 
         display: 'flex', 
         flexDirection: 'row',
