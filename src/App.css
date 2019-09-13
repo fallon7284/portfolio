@@ -172,20 +172,44 @@ iframe{
 .home{
   width: 100%;
   height: 100vh;
-  background: url('../src/images/mtJeffColor.jpg');
+  /* background: url('../src/images/mtJeffColor.jpg'); */
+  /* background-color: #61dafb; */
+  /* background-image: linear-gradient(to top left, #61dafb, #0c36f0); */
+  background-image: linear-gradient(to bottom, white, #637ef5);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
   position: fixed;
-  font-family: open sans;
-  font-size: calc(25px + (70 - 25) * ((100vw - 300px) / (1600 - 300)));
+  font-family: nick;
+  /* font-family: sketch; */
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-size: calc(27px + (100 - 27) * ((80vw - 300px) / (1600 - 300)));
   font-weight: 500;
-  color: rgb(117, 113, 113);
+  /* color: rgb(117, 113, 113); */
+  color: black;
   text-decoration: none;
   animation-name: colorup;
   animation-duration: 4s;
   animation-delay: 3s;
   animation-fill-mode: both;
+}
+
+.home-photo{
+  width: 100%;
+  height: 35vh;
+  background-color: black;
+}
+
+.home img{
+  /* position: fixed; */
+  top: 35vh;
+  height: auto;
+  width: 50%;
+  position: relative;
+    left: 25%;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
 }
 
 
@@ -207,7 +231,7 @@ iframe{
 .quote2{
   width: 100%;
   position: fixed;
-  top: 22%;
+  top: 25%;
   left: 55%;
   transform: translate(-50%, -50%);
   animation-name: quoteslide2;
@@ -215,14 +239,16 @@ iframe{
 }
 
 .quote{
-  text-shadow: 0 0 1px;
-  transition-property: text-shadow;
+  /* text-shadow: 0 0 1px; */
+  /* transition-property: text-shadow; */
+  transition-property: color;
   transition-duration: 1s;
-  text-shadow: 0 0 3px rgb(139, 226, 241)
+  /* text-shadow: 0 0 3px rgb(139, 226, 241) */
 }
 
 .home .quote:hover{
-  text-shadow: 0 0 10px rgb(54, 199, 224)
+  /* text-shadow: 5px 5px 100px rgb(253, 25, 25) */
+  color: #ff8534;
 }
 
 
@@ -260,12 +286,16 @@ iframe{
 
 .bio-content{
   position: fixed;
-  width: 85%;
-  /* height: 80%; */
-  transform: translate(9%);
+  width: 95%;
+  height: 85%;
+  margin: 5%;
+  margin-left: 2.5%;
+  color: white;
+  font-size: 50px;
+  /* transform: translate(9%); */
   background-color: rgba(5, 5, 5);
   text-align: left;
-  top: 8em;
+  top: 2em;
   left: 0%;
   text-decoration: none;
   border: 1px solid rgba(60, 240, 260);
@@ -376,6 +406,17 @@ hr{
   .bio-content{
     top: 12em;
   }
+  .home img{
+    width: 85%;
+    left: 15%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .home img{
+    width: 60%;
+    left: 35%;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -424,7 +465,7 @@ hr{
     top: -50%;
   }
   to {
-    top: 22%;
+    top: 25%;
   }
 }
 
@@ -454,14 +495,25 @@ hr{
 
 @keyframes colorup{
   from {
-    -webkit-filter: grayscale(100%);
+    /* -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%); 
-    -o-filter: grayscale(100%); 
+    -o-filter: grayscale(100%);  */
+    /* font-color: #61dafb; */
   }
   to {
-    -webkit-filter: grayscale(0%);
+    /* -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%); 
-    -o-filter: grayscale(0%); 
+    -o-filter: grayscale(0%);  */
+    /* font-color: white; */
   }
 }
 
+@font-face{
+  src: url('./images/nick.ttf');
+  font-family: nick;
+}
+
+@font-face{
+  src: url('./images/Sketch.woff');
+  font-family: sketch;
+}

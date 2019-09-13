@@ -47,7 +47,8 @@ export default class Bio extends React.Component{
                 <MuiThemeProvider>
                     <TopBar/>
                 </MuiThemeProvider>
-                {pages}
+                {/* {pages} */}
+                <div className="bio-content" >This is the body of my bio page</div>
             </div>
         )
     }
