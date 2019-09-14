@@ -1,5 +1,6 @@
 import React from 'react'
 import TextField from '@material-ui/core/TextField'
+const x = require('../images/x.png')
 
 const styles = {
     input: {
@@ -16,7 +17,7 @@ const styles = {
 
 export default ({messageValid, state, handleChange, handleSubmit, replyingTo, closeContact}) => {
     return (
-        <div>{replyingTo.name.length > 0 && <div><div style={{borderRadius: '20px', cursor: 'pointer', backgroundColor: 'black'}} onClick={closeContact}>X</div>{`replying to ${replyingTo.name}'s comment: \"${replyingTo.message}"`}</div>}
+        <div>{replyingTo.name.length > 0 && <div style={{color: 'black', fontSize: '.5em'}}><div style={{borderRadius: '20px', cursor: 'pointer'}} onClick={closeContact}><img style={{width: '6vh', height: 'auto'}} src={x}/></div>{`replying to ${replyingTo.name}'s comment: \"${replyingTo.message}"`}</div>}
             <form onSubmit={(e) => {
             e.preventDefault()
             handleSubmit()
