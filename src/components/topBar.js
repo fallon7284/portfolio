@@ -26,8 +26,7 @@ const styles = {
     typography: {
         fontFamily: 'nick',
         color: "black",
-        // fontSize: '2.5em'
-        fontSize: 'calc(20px + (50 - 20) * ((100vw - 300px) / (1600 - 300)))'
+        fontSize: 'calc(20px + (60 - 20) * ((100vw - 300px) / (1600 - 300)))'
     },
     links: {
         display: 'flex',
@@ -89,9 +88,9 @@ export default () => {
                 to={'/'}
                 prefetch="true"
             >
-                <Typography style={{...styles.typography, position: 'fixed', left: '2%', fontSize: 'calc(25px + (60 - 25) * ((100vw - 300px) / (1600 - 300)))'}}>Brendan Fallon</Typography>
+                <Typography style={{...styles.typography}}>Brendan Fallon</Typography>
             </Button>
-            <div className="links" style={{...styles.links, flexFlow: 'none'}}>
+            <div className="links" style={{...styles.links}}>
                 <div >
                 <Button 
                     className="button"
