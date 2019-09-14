@@ -22,8 +22,15 @@ button:hover{
 }
 
 .top-bar{
-  background: inherit;
-  font-family: nick;
+  font-family: 'sketch';
+  float: 'top';
+  box-shadow: 'none';
+  background-color: 'white';
+  display: 'flex';
+  flex-direction: 'row';
+  justify-content: 'space-between';
+  opacity: 1;
+  position: 'fixed';
 }
 
 .links{
@@ -408,7 +415,6 @@ hr{
   color: #61dafb;
 }
 
-
 @media only screen and (max-width: 800px) {
   .home img{
     width: 60%;
@@ -428,10 +434,6 @@ hr{
 @media only screen and (max-width: 675px) {
   .contact{
     top: 6vh;
-  }
-  .bio {
-    top: 20vh;
-    /* height: 80% */
   }
   .home img{
     width: 60%;
@@ -467,31 +469,27 @@ hr{
     width: 100%;
   }
   .contact-left{
-    /* position: fixed; */
     display: block;
     width: 90%;
     left: 5%;
   }
   .messages{
-    /* position: fixed; */
     display: block;
     width: 90%;
     left: 5%;
   }
-  .top-bar{
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 365px) {
   .contact{
     top: 6vh;
   }
   .bio-body{
-    top: 7.5em;
-    position: fixed;
+    top: 1em;
+  }
+  .top-bar{
+    flex-direction: column;
   }
 }
 
@@ -501,8 +499,7 @@ hr{
     top: 6vh;
   }
   .bio-body{
-    top: 8em;
-    position: fixed;
+    top: 1em;
   }
 }
 

@@ -13,7 +13,7 @@ const styles = {
         float: 'top',
         boxShadow: 'none',
         backgroundColor: 'white',
-        display: 'flex', 
+        display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         opacity: 1,
@@ -89,7 +89,7 @@ export default () => {
                 to={'/'}
                 prefetch="true"
             >
-                <Typography style={{...styles.typography, fontSize: 'calc(25px + (60 - 25) * ((100vw - 300px) / (1600 - 300)))'}}>Brendan Fallon</Typography>
+                <Typography style={{...styles.typography, position: 'fixed', left: '2%', fontSize: 'calc(25px + (60 - 25) * ((100vw - 300px) / (1600 - 300)))'}}>Brendan Fallon</Typography>
             </Button>
             <div className="links" style={{...styles.links, flexFlow: 'none'}}>
                 <div >

@@ -28,7 +28,7 @@ export default () => {
                         </div>
                     </div>
                 </div>
-                <div>Not very long ago I was contributing my daily efforts to building skyscrapers rather than of web applications, but in November of 2018 I took a week-long bootcamp prep course at Fullstack Academy and my life changed forever.</div>
+                <div>Not very long ago I was contributing my daily efforts to building skyscrapers rather than web applications, but in November of 2018 I took a week-long bootcamp prep course at Fullstack Academy and my life changed forever.</div>
                 <div>First it was () =>{'{}'}s, []s, and ""s. Then for (let i = 0)s, while (condition)s, and {'{}'}s.</div>
                 <div>The next thing I knew it was recursion, factory functions, classes, prototypal inheritance.</div>
                 <div>The prep course ended on a Sunday, and after 9 years in my field I gave my notice the next day.</div>
