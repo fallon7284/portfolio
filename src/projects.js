@@ -30,7 +30,7 @@ module.exports = [
     },
     {
         name: 'This Portfolio Site!',
-        image: require('../src/images/portfolioScreen.png'),
+        image: require('../src/images/projects.png'),
         description: 'This site was created with Create React App along with a Node/Express backend to allow for the comments section' +  
         ' which includes the ability to reply to comments. Style is almost entirely CSS other than the top bar component and the message form inputs.',
         // deployed: 'https://sellinbags.herokuapp.com',
