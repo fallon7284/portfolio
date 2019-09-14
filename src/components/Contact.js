@@ -44,6 +44,7 @@ export default class Contact extends React.Component{
 
     comment = () => {
         this.setState({commenting: !this.state.commenting, isReplyTo: null})
+        window.scrollTo(0, 0)
     }
 
     closeContact = () => {

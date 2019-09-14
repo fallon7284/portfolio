@@ -70,12 +70,12 @@ iframe{
 
 .messages{
   margin-top: 10vh;
-  overflow: auto;
+  overflow: scroll;
   width: 50%;
   margin-bottom: 5vh;
   background-color: white;
   border-radius: 20px;
-  height: 80vh;
+  /* height: 80vh; */
 }
 
 .message{
@@ -137,29 +137,28 @@ iframe{
 }
 
 .contact{
-  height: 100%;
-  overflow: scroll;
+  overflow-y: hidden;
+  height: 95%;
   width: 100%;
   font-size: 3em;
+  top: 5%;
   color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   position: fixed;
-  /* background-color: #303030; */
-  /* background-image: linear-gradient(to bottom, white, #1d6bfa); */
 }
 
 .contact-left{
   margin-top: 10vh;
-  height: 80vh;
+  /* height: 80vh; */
   width: 30%;
   font-size: calc(15px + (25 - 15) * ((100vw - 300px) / (1600 - 300)));
   display: flex;
-  float: left;
+  /* float: left; */
   flex-direction: column;
   justify-content: space-between;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .contact-me{
@@ -435,6 +434,9 @@ hr{
   .links{
     flex-direction: column;
   }
+  .contact{
+    top: 12vh;
+  }
 }
 @media only screen and (max-width: 675px) {
   .contact{
@@ -469,19 +471,25 @@ hr{
     top: 12vh;
     display: flex;
     flex-direction: column;
+    overflow: auto;
+    position: relative;
   }
   .form-area{
     width: 100%;
   }
   .contact-left{
-    display: block;
     width: 90%;
     left: 5%;
   }
   .messages{
-    display: block;
+    margin-top: 0;
     width: 90%;
     left: 5%;
+    overflow: visible;
+  }
+  .contact{
+    margin-left: 4%;
+    margin-right: 4%;
   }
 }
 
