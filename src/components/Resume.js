@@ -7,11 +7,11 @@ const Resume = require('../images/BrendanFallon.pdf')
 
 export default () => {
     return (
-        <div className="resume">
+        <div className="resume" >
             <MuiThemeProvider>
                 <TopBar />
             </MuiThemeProvider>
-            <iframe height="100%" title="brendan-fallon-resume" src={Resume}></iframe>
+            <iframe height="auto" title="brendan-fallon-resume" src={Resume}></iframe>
         </div>
     )
 }

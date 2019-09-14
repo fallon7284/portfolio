@@ -318,6 +318,7 @@ span{
 
 .thumb{
   width: 85%;
+  height: 50vh;
   border-radius: 7px;
   background-color: rgba(255, 255, 255, 0);
   margin: 6px;
@@ -325,7 +326,7 @@ span{
   font-family: futura, Montserrat;
   font-size: calc(45px + (75 - 45) * ((100vw - 300px) / (1600 - 300)));
   color: black;
-  margin-bottom: 3%;
+  margin-bottom: 5%;
   display: flex;
   flex-direction: column;
   transition: all .4s ease-in-out;
@@ -355,6 +356,7 @@ span{
 
 .project-body{
   display: flex;
+  position: relative;
   flex-direction: row;
   width: 100%;
   height: 100%;
@@ -364,6 +366,7 @@ span{
 
 .details{
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 50%;
   justify-content: space-between;
@@ -386,7 +389,6 @@ span{
   overflow: hidden;
   width: 80%;
   height: auto;
-  transform: translate(5%, 5%);
   object-fit: contain;
 }
 
@@ -455,6 +457,23 @@ hr{
   }
 }
 
+@media only screen and (max-width: 365px) {
+  .contact{
+    top: 6vh;
+  }
+  .bio-body{
+    top: 1em;
+  }
+  .top-bar{
+    flex-direction: column;
+  }
+  .thumb {
+    /* height: 60vh; */
+    /* margin-bottom: 10vh; */
+    
+  }
+}
+
 
 @media only screen and (max-width: 500px) {
   .thumb .project-body {
@@ -465,8 +484,12 @@ hr{
     display: block;
   }
   .thumb {
-    height: 50vh;
+    height: 70vh;
+    margin-bottom: 10%;
+    /* background-color: #fcfcfc; */
+    overflow: hidden;
   }
+  
   .contact{
     top: 12vh;
     display: flex;
@@ -493,18 +516,6 @@ hr{
   }
 }
 
-
-@media only screen and (max-width: 365px) {
-  .contact{
-    top: 6vh;
-  }
-  .bio-body{
-    top: 1em;
-  }
-  .top-bar{
-    flex-direction: column;
-  }
-}
 
 
 @media only screen and (max-width: 300px) {
