@@ -6,7 +6,7 @@ const me = require('../images/me.jpg')
 
 export default () => {
     return (
-        <div className="bio">
+        <div className="bio" style={{display: 'block'}}>
             <MuiThemeProvider>
                 <TopBar/>
             </MuiThemeProvider>

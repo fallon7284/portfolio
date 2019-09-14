@@ -412,24 +412,6 @@ hr{
   }
 }
 
-@media only screen and (max-width: 675px) {
-  .contact{
-    top: 6vh;
-  }
-  .bio {
-    top: 20vh;
-    /* height: 80% */
-  }
-  .bio img{
-    width: 50%;
-    height: 50%;
-  }
-  .home img{
-    width: 85%;
-    left: 15%;
-  }
-}
-
 @media only screen and (max-width: 800px) {
   .home img{
     width: 60%;
@@ -439,10 +421,31 @@ hr{
     top: 4em;
   }
   .bio img{
-    width: 40%;
-    height: 40%
+    width: 50%;
+    height: 50%
   }
 }
+@media only screen and (max-width: 675px) {
+  .contact{
+    top: 6vh;
+  }
+  .bio {
+    top: 20vh;
+    /* height: 80% */
+  }
+  .home img{
+    width: 85%;
+    left: 15%;
+  }
+  .middle{
+    flex-direction: column;
+  }
+  .middle img{
+    width: 100%;
+    height: auto
+  }
+}
+
 
 @media only screen and (max-width: 500px) {
   .thumb .project-body {
@@ -474,6 +477,10 @@ hr{
     display: block;
     width: 90%;
     left: 5%;
+  }
+  .top-bar{
+    display: flex;
+    flex-direction: column;
   }
 }
 
