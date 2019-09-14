@@ -6,6 +6,7 @@ import ProjectThumb from './ProjectThumb'
 
 
 export default () => {
+    window.scrollTo(0, 0)
     return (
         <div className="projects">
         <MuiThemeProvider>
