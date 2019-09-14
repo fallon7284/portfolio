@@ -194,7 +194,7 @@ iframe{
   background-size: cover; 
   position: fixed;
   font-family: nick, futura, arial;
-  font-size: calc(27px + (100 - 27) * ((80vw - 300px) / (1600 - 300)));
+  font-size: calc(24px + (100 - 24) * ((80vw - 300px) / (1600 - 300)));
   color: black;
   text-decoration: none;
   animation-name: colorup;
