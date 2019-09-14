@@ -408,14 +408,6 @@ hr{
   color: #61dafb;
 }
 
-@media only screen and (max-width: 400px) {
-  .contact{
-    top: 6vh;
-  }
-  .bio-content{
-    top: 50vh;
-  }
-}
 
 @media only screen and (max-width: 800px) {
   .home img{
@@ -442,8 +434,8 @@ hr{
     /* height: 80% */
   }
   .home img{
-    width: 85%;
-    left: 15%;
+    width: 60%;
+    left: 30%;
   }
   .middle{
     flex-direction: column;
@@ -491,6 +483,29 @@ hr{
     flex-direction: column;
   }
 }
+
+
+@media only screen and (max-width: 400px) {
+  .contact{
+    top: 6vh;
+  }
+  .bio-body{
+    top: 7.5em;
+    position: fixed;
+  }
+}
+
+
+@media only screen and (max-width: 300px) {
+  .contact{
+    top: 6vh;
+  }
+  .bio-body{
+    top: 8em;
+    position: fixed;
+  }
+}
+
 
 @keyframes quoteslide {
   from {
