@@ -5,8 +5,7 @@ const styles = {
     input: {
         width: "100%",
         backgroundColor: 'white',
-        color: 'white',
-        fontFamily: 'futura, open sans condensed'
+        color: 'white'
     },
     message: {
         height: "40vh",
@@ -27,7 +26,7 @@ export default ({messageValid, state, handleChange, handleSubmit, replyingTo, cl
                 label="Your Name" 
                 value={state.name} 
                 onChange={handleChange}
-                variant="outlined"
+                // variant="outlined"
                 style={styles.input}
             />
             {/* <input style={{height: '10vh', backgroundImage: 'linear-gradient(to top, black, #303030)', marginTop: '2vh', color: 'white', fontFamily: 'futura', fontSize: '14px', width: '100%'}}></input> */}
@@ -36,7 +35,7 @@ export default ({messageValid, state, handleChange, handleSubmit, replyingTo, cl
                 label="Your Email Address" 
                 value={state.email} 
                 onChange={handleChange}
-                variant="outlined"
+                // variant="outlined"
                 style={styles.input}
             />
             <TextField 
@@ -44,24 +43,20 @@ export default ({messageValid, state, handleChange, handleSubmit, replyingTo, cl
                 label="Your Message" 
                 value={state.message} 
                 onChange={handleChange}
-                variant="outlined"
+                // variant="outlined"
                 multiline
                 // rowsMax="10"
                 style={styles.input}
             />
             {messageValid && 
-                <button 
-                    type="submit" 
+                <div 
+                    onClick={handleSubmit} 
+                    className="comment-button"
                     style={{
-                        height: '10vh', 
-                        backgroundImage: 'linear-gradient(to top, black, #303030)', 
                         marginTop: '2vh', 
-                        color: 'white', 
-                        fontFamily: 'futura, open sans condensed', 
-                        fontSize: '14px', 
-                        width: '100%'}}
+                        cursor: 'pointer'}}
                 >Submit
-                </button>}
+                </div>}
             </form>
         </div>
     )

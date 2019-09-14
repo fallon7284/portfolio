@@ -1,10 +1,12 @@
 import React from 'react'
 import TopBar from './topBar'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import { FaLinkedin, FaGithub } from 'react-icons/fa'
+// import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import ContactForm from './ContactForm'
 import Message from './Message'
 import axios from 'axios'
+const github = require('../images/github.png')
+const linkedin = require('../images/linked.svg')
 
 export default class Contact extends React.Component{
     constructor(){
@@ -103,30 +105,31 @@ export default class Contact extends React.Component{
                 <div className="contact">
                     <div className="contact-left">
                         <div className="contact-me">
-                        <div className="link-icons">
+                        <div className="link-icons" style={{marginTop: '5px'}}>
                             <a href="http://linkedin.com/in/brendanfallondev" target="blank" rel="noopener noreferrer">
-                                <FaLinkedin className="icons" />
+                                {/* <FaLinkedin className="icons" /> */}
+                                <img style={{width: '8vh', height: 'auto'}} src={linkedin}/>
                             </a>
                             <a href="http://github.com/fallon7284" target="blank" rel="noopener noreferrer">
-                                <FaGithub className="icons" />
+                                {/* <FaGithub className="icons" /> */}
+                                <img style={{width: '8vh', height: 'auto'}} src={github}/>
                             </a>  
                         </div>
                         If you'd like to get in touch with me, you can
                         leave a message below, or click the email button in the top bar.  
                         I'd love to hear from you.
                         </div>
-                        <button 
+                        <div 
+                            className="comment-button"
                             style={{
-                                height: '10vh',
-                                backgroundImage: 'linear-gradient(to top, black, #303030)', 
-                                marginTop: '2vh', 
-                                color: 'white', 
-                                fontFamily: 'futura, open sans condensed', 
-                                fontSize: '14px'}} 
+                                marginTop: '2vh',
+                                fontFamily: 'nick',
+                                cursor: 'pointer',
+
+                            }} 
                             onClick={() => {
                                 this.comment()
-                                console.log(this.state)
-                                }}>Leave a Comment</button>
+                                }}>Leave a Comment</div>
                         <div className="form-area">
                         {this.state.commenting &&
                             <ContactForm 

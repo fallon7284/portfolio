@@ -1,11 +1,20 @@
-import React from 'react'
-import { DiGithubFull } from "react-icons/di"
+import React, { useState } from 'react'
+const github = require('../images/github.png')
 
 
 export default ({p}) => {
+    const [hover, setHover] = useState(false)
     const deployedOrGithub = p.deployed ? p.deployed : p.github
     return (
         <div className="thumb">
+            <div className="project">
+                <a target="blank" rel="noopener noreferrer" href={deployedOrGithub} style={{
+                    textDecoration: 'none'}}
+                >
+                    {p.name}
+                </a>
+                <hr />
+            </div>
             <div className="project-body">
                 <div className="details">
                     <a target="blank" rel="noopener noreferrer" href={deployedOrGithub}>
@@ -13,25 +22,11 @@ export default ({p}) => {
                     </a>
                 </div>
                 <div className="details">
-                    <div className="project">
-                        <a target="blank" rel="noopener noreferrer" href={deployedOrGithub} style={{
-                            textDecoration: 'none',
-                            color: 'white'}}
-                        >
-                            {p.name}
-                        </a>
-                        <hr />
-                    </div>
                     <p className="description">
                         {p.description}
                     </p>
                     <a target="blank" rel="noopener noreferrer" href={p.github}>
-                        <DiGithubFull className="github" style={{
-                            fontSize: '1.7em',
-                            bottom: '99%', 
-                            textDecoration: 'none', 
-                            color: 'white'}}
-                        />
+                        <img style={{height: hover ? '7vw' : '6vw'}} src={github} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}></img>
                     </a>
                     <div className="clearfix"></div>
                 </div>

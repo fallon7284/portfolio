@@ -21,6 +21,10 @@ button:hover{
   cursor: pointer;
 }
 
+.top-bar{
+  background: inherit;
+  font-family: nick;
+}
 
 
 /* this is my resume section */
@@ -41,9 +45,10 @@ iframe{
 /* this is my contact section */
 
 .comments-title{
-  background-image: linear-gradient(to top, black, #303030);
-  font-family: futura, open sans condensed;
-  font-size: calc(25px + (70 - 25) * ((100vw - 300px) / (1600 - 300)));
+  /* background-image: linear-gradient(to top, black, #303030); */
+  color: black;
+  font-family: nick, futura, arial;
+  font-size: calc(45px + (70 - 45) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .messages{
@@ -77,12 +82,12 @@ iframe{
 
 .icons:hover{
   transition-duration: .5s;
-  color: rgb(169, 218, 226)
+  color: #ff8534
 }
 
 .link-icons a{
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .message-reply{
@@ -124,14 +129,15 @@ iframe{
   flex-direction: row;
   justify-content: space-evenly;
   position: fixed;
-  background-color: #303030;
+  /* background-color: #303030; */
+  /* background-image: linear-gradient(to bottom, white, #1d6bfa); */
 }
 
 .contact-left{
   margin-top: 10vh;
   height: 80vh;
   width: 30%;
-  font-size: calc(15px + (45 - 25) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(15px + (25 - 15) * ((100vw - 300px) / (1600 - 300)));
   display: flex;
   float: left;
   flex-direction: column;
@@ -140,10 +146,19 @@ iframe{
 }
 
 .contact-me{
-  background-image: linear-gradient(to top, black, #303030);
+  /* background-image: linear-gradient(to top, white, transparent); */
+  color: black;
 }
 
+.comment-button{
+  color: black;
+  font-family: 'nick';
+  font-size: calc(20px + (50 - 20) * ((100vw - 300px) / (1600 - 300)))
+}
 
+.comment-button:hover{
+  color: #ff8534;
+}
 
 .form-area{
   margin-top: 10vh;
@@ -172,10 +187,8 @@ iframe{
 .home{
   width: 100%;
   height: 100vh;
-  /* background: url('../src/images/mtJeffColor.jpg'); */
-  /* background-color: #61dafb; */
-  /* background-image: linear-gradient(to top left, #61dafb, #0c36f0); */
-  background-image: linear-gradient(to bottom, white, #1d6bfa);
+  /* background-image: linear-gradient(to bottom, white, #1d6bfa); */
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
@@ -197,7 +210,6 @@ iframe{
 }
 
 .home img{
-  /* position: fixed; */
   top: 35vh;
   height: auto;
   width: 50%;
@@ -235,69 +247,53 @@ iframe{
 }
 
 .quote{
-  /* text-shadow: 0 0 1px; */
-  /* transition-property: text-shadow; */
   transition-property: color;
   transition-duration: 1s;
-  /* text-shadow: 0 0 3px rgb(139, 226, 241) */
 }
 
 .home .quote:hover{
-  /* text-shadow: 5px 5px 100px rgb(253, 25, 25) */
   color: #ff8534;
 }
 
 
 /* this is my bio section */
 
-.section{
-  font-family: verdana;
-  position: relative;
-  font-size: calc(19px + (55 - 19) * ((100vw - 250px) / (1600 - 250)));
-  color: white;
-  z-index: 1;
-  text-decoration: none;
-  padding: 5%;
-  padding-left: 9%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  /* animation-name: biofade;
-  animation-duration: .7s; */
-}
-
-
 .bio{
+  font-family: cardenio, futura;
+  font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1600 - 300)));
+  color: #1590b3;
+  top: 2em;
   position: relative;
-  height: 100vh;
-  background: url('../src/images/software.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
 }
 
-.bio-content{
-  position: fixed;
-  width: 95%;
-  height: 85%;
-  margin: 5%;
-  margin-left: 2.5%;
-  color: white;
-  font-size: 50px;
-  transform: translate(0, -9%);
-  background-color: rgba(5, 5, 5);
+.bio-body{
+  position: relative;
   text-align: left;
-  top: 2em;
-  left: 0%;
-  text-decoration: none;
-  border: 1px solid rgba(60, 240, 260);
-  border-radius: 5px;
-  opacity: 1;
+  margin: 4%;
+  overflow-y: scroll;
 }
+
+.bio-body .middle{
+  display: flex;
+  font-size: calc(28px + (65 - 28) * ((100vw - 300px) / (1600 - 300)));
+  color: black;
+}
+
+.bio-body img{
+  height: 30%;
+  width: 30%;
+}
+
+.middle div{
+  display: flex;
+  flex-direction: column;
+}
+
+span{
+  color: #ff8534;
+  white-space:nowrap;
+}
+
 
 
 
@@ -305,28 +301,40 @@ iframe{
 
 
 .thumb{
-  /* height: 36vh; */
   width: 85%;
-  border: 2px solid rgb(185, 185, 185);
   border-radius: 7px;
-  background-color: rgba(39, 41, 48, .8);
+  background-color: rgba(255, 255, 255, 0);
   margin: 6px;
   padding: 1.5vh;
   font-family: futura, Montserrat;
-  font-size: 2.5em;
-  color: white;
+  font-size: calc(45px + (75 - 45) * ((100vw - 300px) / (1600 - 300)));
+  color: black;
   margin-bottom: 3%;
   display: flex;
   flex-direction: column;
   transition: all .4s ease-in-out;
 }
 
-/* .thumb {  } */
-.thumb:hover { background-color: rgba(62, 64, 70, 0.8); }
+.thumb:hover { background-color: rgba(255, 255, 255, 0.8); }
 
 
 .project{
   width: 100%;
+  font-family: sketch;
+  /* font-size: 75px; */
+}
+
+.project a{
+  text-decoration: none;
+  color: black;
+}
+
+.project a:hover{
+  color: #ff8534
+}
+
+.project img:hover{
+  height: 7vw;
 }
 
 .project-body{
@@ -347,7 +355,7 @@ iframe{
   height: 100%;
   top: 1%;
   bottom: 2%;
-  font-size: calc(20px + (45 - 20) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(25px + (75 - 25) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .details .description{
@@ -360,8 +368,8 @@ iframe{
 
 .details img{
   overflow: hidden;
-  width: 30vh;
-  height: 30vh;
+  width: 80%;
+  height: auto;
   transform: translate(5%, 5%);
   object-fit: contain;
 }
@@ -372,7 +380,9 @@ hr{
 }
 
 .project-list{
-  background: url('../src/images/fsa.png') no-repeat center center fixed;
+  /* background: url('../src/images/fsa.png') no-repeat center center fixed; */
+  /* background-image: linear-gradient(to bottom, white, #1d6bfa); */
+  /* background-image: linear-gradient(to bottom, #adc6f5, #83aefd); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -402,13 +412,17 @@ hr{
   }
 }
 
-@media only screen and (max-width: 625px) {
+@media only screen and (max-width: 675px) {
   .contact{
     top: 6vh;
   }
-  .bio-content{
+  .bio {
     top: 20vh;
-    height: 80%
+    /* height: 80% */
+  }
+  .bio img{
+    width: 50%;
+    height: 50%;
   }
   .home img{
     width: 85%;
@@ -420,6 +434,13 @@ hr{
   .home img{
     width: 60%;
     left: 35%;
+  }
+  .bio {
+    top: 4em;
+  }
+  .bio img{
+    width: 40%;
+    height: 40%
   }
 }
 
@@ -520,4 +541,9 @@ hr{
 @font-face{
   src: url('./images/Sketch.woff');
   font-family: sketch;
+}
+
+@font-face{
+  src: url('./images/CardenioModern-Regular.otf');
+  font-family: cardenio;
 }

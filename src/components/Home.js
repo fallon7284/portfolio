@@ -11,10 +11,10 @@ export default () => {
                 <Link to="/bio" style={{textDecoration: 'none', color: 'black'}} prefetch="true">
                     <div className="quote">
                         <div className="quote1">
-                             {"{ Brendan: Fallon }"}
+                             {"{ brendanFallon: "}
                         </div>
                         <div className="quote2">
-                            {"[Fullstack, Software, Engineer]"}
+                            {"['Fullstack', 'Software', 'Engineer']}"}
                         </div>
                     </div>
                     <img src={cartoon}></img>

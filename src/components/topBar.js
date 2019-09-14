@@ -9,9 +9,10 @@ const Resume = require('../images/BrendanFallon.pdf')
 
 const styles = {
     appBar: {
-        fontFamily: 'futura, open sans condensed',
+        fontFamily: 'sketch',
         float: 'top',
-        backgroundColor: 'black', 
+        boxShadow: 'none',
+        backgroundColor: 'white',
         display: 'flex', 
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -23,8 +24,9 @@ const styles = {
         alignItems: 'left'
     },
     typography: {
-        fontFamily: 'futura, open sans condensed', 
-        color: "white"
+        fontFamily: 'nick',
+        color: "black",
+        fontSize: '2.5em'
     },
     links: {
         display: 'flex',
@@ -78,7 +80,7 @@ export default () => {
     
     return (
         <AppBar 
-            className={`top-bar-`}
+            className={`top-bar`}
             style={styles.appBar}
         >
             <Button 
@@ -88,7 +90,7 @@ export default () => {
                 to={'/'}
                 prefetch="true"
             >
-                <Typography style={{...styles.typography, fontSize: '2em'}}>Brendan Fallon</Typography>
+                <Typography style={{...styles.typography, fontSize: '3em'}}>Brendan Fallon</Typography>
             </Button>
             <div style={styles.links}>
                 <Button 
@@ -98,7 +100,7 @@ export default () => {
                     to={'/bio'}
                     prefetch="true"
                     >
-                    <Typography style={{...styles.typography, color: window.location.pathname === '/bio' ? 'rgb(185, 185, 185)' : styles.typography.color}}>Bio</Typography>
+                    <Typography style={{...styles.typography, color: window.location.pathname === '/bio' ? '#ff8534' : styles.typography.color}}>Bio</Typography>
                 </Button>            
                 <Button 
                     className="button"
@@ -107,7 +109,7 @@ export default () => {
                     to={'/projects'}
                     prefetch="true"
                     >
-                    <Typography style={{...styles.typography, color: window.location.pathname === '/projects' ? 'rgb(185, 185, 185)' : styles.typography.color}}>Projects</Typography>
+                    <Typography style={{...styles.typography, color: window.location.pathname === '/projects' ? '#ff8534' : 'black'}}>Projects</Typography>
                 </Button>
                 {contact}
                 {resume}
