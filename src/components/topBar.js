@@ -31,10 +31,8 @@ const styles = {
     },
     links: {
         display: 'flex',
-        flexDirection: 'row',
         paddingRight: '15px',
-        textAlign: 'center',
-        flexWrap: 'wrap' 
+        textAlign: 'center'
     }
 }
 
@@ -93,7 +91,8 @@ export default () => {
             >
                 <Typography style={{...styles.typography, fontSize: 'calc(25px + (60 - 25) * ((100vw - 300px) / (1600 - 300)))', position: 'fixed', left: 0}}>Brendan Fallon</Typography>
             </Button>
-            <div style={{...styles.links, display: 'block'}}>
+            <div className="links" style={{...styles.links, flexFlow: 'none'}}>
+                <div >
                 <Button 
                     className="button"
                     style={styles.button} 
@@ -112,8 +111,11 @@ export default () => {
                     >
                     <Typography style={{...styles.typography, color: window.location.pathname === '/projects' ? '#ff8534' : 'black'}}>Projects</Typography>
                 </Button>
+                </div>
+                <div>
                 {contact}
                 {resume}
+                </div>
             </div>
         </AppBar>
     )

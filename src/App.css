@@ -26,6 +26,11 @@ button:hover{
   font-family: nick;
 }
 
+.links{
+  display: flex;
+  flex-direction: row;
+}
+
 
 /* this is my resume section */
 
@@ -423,6 +428,9 @@ hr{
   .bio img{
     width: 50%;
     height: 50%
+  }
+  .links{
+    flex-direction: column;
   }
 }
 @media only screen and (max-width: 675px) {
