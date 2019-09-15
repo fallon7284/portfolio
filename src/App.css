@@ -1,8 +1,3 @@
-/* @font-face{
-  font-family: bungee;
-  src: url('https://fonts.googleapis.com/css?family=Bungee Shade')
-} */
-
 
 .App {
   text-align: center;
@@ -62,7 +57,6 @@ iframe{
 /* this is my contact section */
 
 .comments-title{
-  /* background-image: linear-gradient(to top, black, #303030); */
   color: black;
   font-family: nick, futura, arial;
   font-size: calc(45px + (70 - 45) * ((100vw - 300px) / (1600 - 300)));
@@ -70,12 +64,17 @@ iframe{
 
 .messages{
   margin-top: 10vh;
-  overflow: scroll;
   width: 50%;
   margin-bottom: 5vh;
   background-color: white;
   border-radius: 20px;
   /* height: 80vh; */
+}
+
+.messages-body{
+  height: 100%;
+  overflow: scroll;
+  border-radius: 3vh;
 }
 
 .message{
@@ -151,18 +150,14 @@ iframe{
 
 .contact-left{
   margin-top: 10vh;
-  /* height: 80vh; */
   width: 30%;
   font-size: calc(15px + (25 - 15) * ((100vw - 300px) / (1600 - 300)));
   display: flex;
-  /* float: left; */
   flex-direction: column;
   justify-content: space-between;
-  /* overflow: scroll; */
 }
 
 .contact-me{
-  /* background-image: linear-gradient(to top, white, transparent); */
   color: black;
 }
 
@@ -203,8 +198,6 @@ iframe{
 .home{
   width: 100%;
   height: 100vh;
-  /* background-image: linear-gradient(to bottom, white, #1d6bfa); */
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
@@ -341,7 +334,6 @@ b{
 .project{
   width: 100%;
   font-family: sketch;
-  /* font-size: 75px; */
 }
 
 .project a{
@@ -401,9 +393,6 @@ hr{
 }
 
 .project-list{
-  /* background: url('../src/images/fsa.png') no-repeat center center fixed; */
-  /* background-image: linear-gradient(to bottom, white, #1d6bfa); */
-  /* background-image: linear-gradient(to bottom, #adc6f5, #83aefd); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -470,11 +459,6 @@ hr{
   .top-bar{
     flex-direction: column;
   }
-  .thumb {
-    /* height: 60vh; */
-    /* margin-bottom: 10vh; */
-    
-  }
 }
 
 
@@ -490,6 +474,9 @@ hr{
     height: 11em;
     margin-bottom: 10%;
     overflow: hidden;
+  }
+  .details img{
+    height: 5em;
   }
   
   .contact{
@@ -510,6 +497,8 @@ hr{
     margin-top: 0;
     width: 90%;
     left: 5%;
+  }
+  .messages-body{
     overflow: visible;
   }
   .contact{

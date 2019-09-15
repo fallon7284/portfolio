@@ -146,6 +146,7 @@ export default class Contact extends React.Component{
                     </div>
                     <div className="messages">
                             <div className="comments-title">COMMENTS</div>
+                            <div className="messages-body">
                             {this.state.messages.map((m) => {
                                 return <Message 
                                     replyClick={() => this.reply(m.userName, m.message, m.id)}
@@ -159,6 +160,7 @@ export default class Contact extends React.Component{
                                     replies={m.replies}
                                 />
                             })}
+                            </div>
                     </div>
                 </div>
             </div>
