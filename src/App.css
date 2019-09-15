@@ -521,18 +521,10 @@ hr{
   }
 }
 
-@media only screen 
-  and (max-width: 800px) 
-  and (orientation: landscape){
-  .thumb {
-    height: 6em;
-    margin-bottom: 7vw;
-  }
-}
 
 @media only screen 
-  and (max-width: 675px) 
-  and (orientation: landscape){
+and (max-width: 675px) 
+and (orientation: landscape){
   .thumb {
     height: 5.5em;
     margin-bottom: 4vw;
@@ -541,7 +533,7 @@ hr{
     top: 12vw;
     /* width: 80%; */
   }
-
+  
 }
 
 
@@ -554,6 +546,20 @@ hr{
   }
 }
 
+@media only screen 
+  and (max-width: 800px) 
+  and (orientation: landscape){
+  .thumb {
+    height: 6em;
+    margin-bottom: 7vw;
+  }
+  .middle{
+    flex-direction: row;
+  }
+  .links{
+    flex-direction: row;
+  }
+}
 
 @keyframes quoteslide {
   from {
