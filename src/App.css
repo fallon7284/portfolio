@@ -64,12 +64,17 @@ iframe{
 
 .messages{
   margin-top: 10vh;
-  overflow: scroll;
   width: 50%;
   margin-bottom: 5vh;
   background-color: white;
   border-radius: 20px;
   /* height: 80vh; */
+}
+
+.messages-body{
+  height: 100%;
+  overflow: scroll;
+  border-radius: 3vh;
 }
 
 .message{
@@ -492,6 +497,8 @@ hr{
     margin-top: 0;
     width: 90%;
     left: 5%;
+  }
+  .messages-body{
     overflow: visible;
   }
   .contact{
