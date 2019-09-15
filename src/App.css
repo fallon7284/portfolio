@@ -310,7 +310,10 @@ span{
   white-space:nowrap;
 }
 
-
+b{
+  text-decoration: none;
+  color: #ff8534;
+}
 
 
 /* this is my project section */
@@ -484,9 +487,8 @@ hr{
     display: block;
   }
   .thumb {
-    height: 70vh;
+    height: 11em;
     margin-bottom: 10%;
-    /* background-color: #fcfcfc; */
     overflow: hidden;
   }
   

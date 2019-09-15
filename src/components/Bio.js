@@ -34,7 +34,7 @@ export default () => {
                 <div>The prep course ended on a Sunday, and after 9 years in my field I gave my notice the next day.</div>
                 <div>I knew right away that I wanted this, I knew that I was good, and I couldn't wait.</div>
                 <div>2 weeks of studying later I was accepted into the next full-time immersive cohort at Fullstack.</div>
-                <div>5 more weeks and I was on the road to Chicago. <Link style={{textDecoration: 'none'}} to="/projects"><b style={{color: '#ff8534'}}>Check out some of the projects I built there and since!</b></Link></div>
+                <div>5 more weeks and I was on the road to Chicago. <Link style={{textDecoration: 'none'}} to="/projects"><b className="link-bio-projects" >Check out some of the projects I built there and since!</b></Link></div>
                 
             </div>
         </div>
