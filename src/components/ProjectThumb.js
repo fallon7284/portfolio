@@ -26,7 +26,7 @@ export default ({p}) => {
                         {p.description}
                     </p>
                     <a target="blank" rel="noopener noreferrer" href={p.github}>
-                        <img style={{height: hover ? '7vw' : '6vw'}} src={github} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}></img>
+                        <img style={{height: hover ? '9vw' : '8vw'}} src={github} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}></img>
                     </a>
                     <div className="clearfix"></div>
                 </div>
