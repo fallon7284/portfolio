@@ -56,6 +56,19 @@ iframe{
 
 /* this is my contact section */
 
+input{
+  border: 1px solid #707070;
+  margin-top: 2px;
+  border-radius: 3px;
+  width: 100%;
+}
+
+/* .form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+} */
+
 .comments-title{
   color: black;
   font-family: nick, futura, arial;
@@ -140,7 +153,7 @@ iframe{
   height: 95%;
   width: 100%;
   font-size: 3em;
-  top: 5%;
+  top: 3%;
   color: white;
   display: flex;
   flex-direction: row;
@@ -172,7 +185,7 @@ iframe{
 }
 
 .form-area{
-  margin-top: 10vh;
+  margin-top: 2vh;
   height: 60%;
   width: 100%;
   left: 20vw;
@@ -497,9 +510,10 @@ hr{
   .contact-left{
     width: 90%;
     left: 5%;
+    margin-top: 5vh;
   }
   .messages{
-    margin-top: 0;
+    margin-top: 3vh;
     width: 90%;
     left: 5%;
   }
@@ -519,23 +533,36 @@ hr{
     height: 6em;
     margin-bottom: 3vw;
   }
-}
-
-@media only screen 
-  and (max-width: 800px) 
-  and (orientation: landscape){
-  .thumb {
-    height: 6em;
-    margin-bottom: 7vw;
+  .contact-left{
+    font-size: 12px;
+  }
+  .message{
+    font-size: 12px;
+  }
+  .comment-button{
+    font-size: 20px
   }
 }
 
+
 @media only screen 
-  and (max-width: 675px) 
-  and (orientation: landscape){
+and (max-width: 675px) 
+and (orientation: landscape){
   .thumb {
     height: 5.5em;
     margin-bottom: 4vw;
+  }
+  .contact{
+    top: 12vw;
+  }
+  .messages{
+    margin-top: 3vh;
+  }
+  .contact-left{
+    margin-top: 3vh;
+  }
+  .icons{
+    width: 2vh;
   }
 }
 
@@ -549,6 +576,39 @@ hr{
   }
 }
 
+@media only screen 
+  and (max-width: 800px) 
+  and (orientation: landscape){
+  .thumb {
+    height: 6em;
+    margin-bottom: 7vw;
+  }
+  .middle{
+    flex-direction: row;
+  }
+  .links{
+    flex-direction: row;
+  }
+  .messages{
+    margin-top: 5vh;
+  }
+  .contact-left{
+    margin-top: 5vh;
+    font-size: 10px;
+  }
+  .comments-title{
+    font-size: 30px;
+  }
+  .message{
+    font-size: 10px;
+  }
+  .contact{
+    top: 12vh
+  }
+  .replies{
+    font-size: 12px;
+  }
+}
 
 @keyframes quoteslide {
   from {

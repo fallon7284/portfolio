@@ -11,7 +11,7 @@ export default () => {
             <MuiThemeProvider>
                 <TopBar />
             </MuiThemeProvider>
-            <iframe height="auto" title="brendan-fallon-resume" src={Resume}></iframe>
+            <iframe height="auto" width="100%" title="brendan-fallon-resume" src={Resume}></iframe>
         </div>
     )
 }

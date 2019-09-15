@@ -26,7 +26,7 @@ const styles = {
     typography: {
         fontFamily: 'nick',
         color: "black",
-        fontSize: 'calc(20px + (60 - 20) * ((100vw - 300px) / (1600 - 300)))'
+        fontSize: 'calc(20px + (50 - 20) * ((100vw - 300px) / (1600 - 300)))'
     },
     links: {
         display: 'flex',
