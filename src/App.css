@@ -458,7 +458,6 @@ hr{
   }
   .middle img{
     width: 100%;
-    /* height: auto */
   }
   /* .thumb {
     height: 20em;
@@ -582,9 +581,6 @@ and (orientation: landscape){
   .thumb {
     height: 6em;
     margin-bottom: 7vw;
-  }
-  .middle{
-    flex-direction: row;
   }
   .links{
     flex-direction: row;
