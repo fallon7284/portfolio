@@ -123,10 +123,9 @@ export default class Contact extends React.Component{
                         <div 
                             className="comment-button"
                             style={{
-                                marginTop: '2vh',
+                                marginTop: '1vh',
                                 fontFamily: 'nick',
                                 cursor: 'pointer',
-
                             }} 
                             onClick={() => {
                                 this.comment()

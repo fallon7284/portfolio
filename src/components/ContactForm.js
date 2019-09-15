@@ -5,20 +5,23 @@ const x = require('../images/x.png')
 const styles = {
     input: {
         width: "100%",
+        height: '40px',
         backgroundColor: 'white',
         color: 'white'
     },
     message: {
-        height: "40vh",
         width: "100%",
         backgroundColor: '#303030'
+    },
+    resize: {
+        fontSize: '10px'
     }
 }
 
 export default ({messageValid, state, handleChange, handleSubmit, replyingTo, closeContact}) => {
     return (
-        <div>{replyingTo.name.length > 0 && <div style={{color: 'black', fontSize: '.5em'}}><div style={{borderRadius: '20px', cursor: 'pointer'}} onClick={closeContact}><img style={{width: '6vh', height: 'auto'}} src={x}/></div>{`replying to ${replyingTo.name}'s comment: \"${replyingTo.message}"`}</div>}
-            <form onSubmit={(e) => {
+        <div >{replyingTo.name.length > 0 && <div style={{color: 'black', fontSize: '.5em'}}><div style={{borderRadius: '20px', cursor: 'pointer'}} onClick={closeContact}><img style={{width: '6vh', height: 'auto'}} src={x}/></div>{`replying to ${replyingTo.name}'s comment: \"${replyingTo.message}"`}</div>}
+            <form className="form" onSubmit={(e) => {
             e.preventDefault()
             handleSubmit()
             }}>
@@ -38,6 +41,8 @@ export default ({messageValid, state, handleChange, handleSubmit, replyingTo, cl
                 onChange={handleChange}
                 // variant="outlined"
                 style={styles.input}
+                InputProps={styles.resize}
+                InputLabelProps={styles.resize}
             />
             <TextField 
                 name="message" 
