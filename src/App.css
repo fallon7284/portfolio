@@ -458,7 +458,7 @@ hr{
   }
   .middle img{
     width: 100%;
-    height: auto
+    /* height: auto */
   }
   /* .thumb {
     height: 20em;
