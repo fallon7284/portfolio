@@ -460,6 +460,7 @@ hr{
   }
   .middle{
     flex-direction: column;
+    margin-bottom: 25px;
   }
   .middle img{
     width: 100%;
