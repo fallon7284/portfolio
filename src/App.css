@@ -184,6 +184,12 @@ input{
   color: #ff8534;
 }
 
+.comment-button-open{
+  color: #ff8534;
+  font-family: 'nick';
+  font-size: calc(20px + (50 - 20) * ((100vw - 300px) / (1600 - 300)))
+}
+
 .form-area{
   margin-top: 2vh;
   height: 60%;
@@ -328,7 +334,6 @@ b{
 .thumb{
   width: 85%;
   height: 50vh;
-  border-radius: 7px;
   background-color: rgba(255, 255, 255, 0);
   margin: 6px;
   padding: 1.5vh;
@@ -455,6 +460,7 @@ hr{
   }
   .middle{
     flex-direction: column;
+    margin-bottom: 25px;
   }
   .middle img{
     width: 100%;
@@ -539,7 +545,10 @@ hr{
     font-size: 12px;
   }
   .comment-button{
-    font-size: 20px
+    font-size: 20px;
+  }
+  .home img{
+    top: 25vh;
   }
 }
 
@@ -572,6 +581,16 @@ and (orientation: landscape){
   }
   .bio-body{
     top: 1em;
+  }
+}
+
+@media only screen 
+  and (max-width: 850px) 
+  and (orientation: portrait){
+  .home img{
+    width: 95vw;
+    left: 50vw;
+    position: fixed;
   }
 }
 

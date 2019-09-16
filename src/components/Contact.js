@@ -121,7 +121,7 @@ export default class Contact extends React.Component{
                         I'd love to hear from you.
                         </div>
                         <div 
-                            className="comment-button"
+                            className={`comment-button${this.state.commenting ? '-open' : ''}`}
                             style={{
                                 marginTop: '1vh',
                                 fontFamily: 'nick',
