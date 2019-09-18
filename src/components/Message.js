@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import MessageBody from './MessageBody'
 
 export default ({number, userName, userEmail, createdAt, message, isReplyTo, replies, replyClick}) => {
-    const seeRepliesString = replies.length ? `See ${replies.length} replies.` : 'No replies'
+    const seeRepliesString = replies.length ? `See ${replies.length} ${replies.length === 1 ? 'reply' : 'replies'}.` : 'No replies'
     const [repliesOpen, setRepliesOpen] = useState(0)
     const replyButton = repliesOpen ? 'Close replies' : seeRepliesString
     const clickHandler = replies.length > 0 ? (() => {
