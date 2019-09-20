@@ -54,7 +54,6 @@ export default class Contact extends React.Component{
     reply = (name, message, id) => {
         const ellipse = message.length > 20 ? '...' : ''
         message = message.slice(0, 20) + ellipse
-        console.log(name, message)
         this.setState({commenting: true, isReplyTo: id, replyingTo: {name, message}})
     }
 
@@ -65,9 +64,9 @@ export default class Contact extends React.Component{
     async handleSubmit(e){
         const { userName, userEmail, message, isReplyTo } = this.state
         const body = { userName, userEmail, message, isReplyTo, replies: [] }
-        console.log('submitting', body)
         try {
             const { data } = await axios.post('https://portfolio-comments.herokuapp.com/comments', body)
+            console.log(data)
             let messages
             if (data.isReplyTo){
                 messages = this.state.messages.map(m => {
@@ -77,7 +76,7 @@ export default class Contact extends React.Component{
                     return m
                 })
             }
-            else messages = [...this.state.messages, data]
+            else messages = [data, ...this.state.messages]
             this.setState({
                 messages: [...messages], 
                 userEmail: '',
