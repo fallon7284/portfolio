@@ -28,11 +28,14 @@ export default ({number, userName, userEmail, createdAt, message, isReplyTo, rep
                     </div>
                 </div>
             </div>
+            <div style={{marginBottom: '8px'}}>
             {repliesOpen > 0 && replies.map(r => {
             return (
-            <MessageBody replyName={userName} key={r.id} createdAt={r.createdAt} userName={r.userName} message={r.message}/>
-            )
+            
+                <MessageBody replyName={userName} key={r.id} createdAt={r.createdAt} userName={r.userName} message={r.message}/>
+                )
             })}
+            </div>
         </div> 
     )
 }
