@@ -20,21 +20,50 @@ const styles = {
 
 export default ({messageValid, state, handleChange, handleSubmit, replyingTo, closeContact}) => {
     return (
-        <div >{replyingTo.name.length > 0 && <div style={{color: 'black', fontSize: '.5em'}}><div style={{borderRadius: '20px', cursor: 'pointer'}} onClick={closeContact}><img style={{width: '6vh', height: 'auto'}} src={x}/></div>{`replying to ${replyingTo.name}'s comment: \"${replyingTo.message}"`}</div>}
+        <div style={{position: 'relative'}}>{
+            replyingTo.name.length > 0 && 
+                <div 
+                    style={{
+                        color: 'black', 
+                        fontSize: '.5em'
+                        }}
+                >
+                    <div 
+                        style={{
+                            borderRadius: '20px', 
+                            cursor: 'pointer'
+                        }} 
+                        onClick={closeContact}
+                    >
+                        <img 
+                            style={{
+                                width: '6vh', 
+                                height: 'auto'
+                            }} 
+                            src={x}
+                        />
+                    </div>{`replying to ${replyingTo.name}'s comment: \"${replyingTo.message}"`}
+                </div>}
             <form className="form" onSubmit={(e) => {
             e.preventDefault()
             handleSubmit()
             }}>
-            <TextField 
+            {/* <TextField 
                 name="userName" 
                 label="Your Name" 
                 value={state.name} 
                 onChange={handleChange}
                 // variant="outlined"
                 style={styles.input}
+            /> */}
+             <input 
+                name="userName"
+                placeholder="Name"
+                value={state.name} 
+                onChange={handleChange}
             />
             {/* <input style={{height: '10vh', backgroundImage: 'linear-gradient(to top, black, #303030)', marginTop: '2vh', color: 'white', fontFamily: 'futura', fontSize: '14px', width: '100%'}}></input> */}
-            <TextField 
+            {/* <TextField 
                 name="userEmail" 
                 label="Your Email Address" 
                 value={state.email} 
@@ -43,8 +72,14 @@ export default ({messageValid, state, handleChange, handleSubmit, replyingTo, cl
                 style={styles.input}
                 InputProps={styles.resize}
                 InputLabelProps={styles.resize}
+            /> */}
+            <input 
+                name="userEmail"
+                placeholder="Email"
+                value={state.email} 
+                onChange={handleChange}
             />
-            <TextField 
+            {/* <TextField 
                 name="message" 
                 label="Your Message" 
                 value={state.message} 
@@ -53,6 +88,12 @@ export default ({messageValid, state, handleChange, handleSubmit, replyingTo, cl
                 multiline
                 // rowsMax="10"
                 style={styles.input}
+            /> */}
+             <input 
+                name="message"
+                placeholder="Message"
+                value={state.message} 
+                onChange={handleChange}
             />
             {messageValid && 
                 <div 

@@ -56,12 +56,12 @@ iframe{
 
 /* this is my contact section */
 
-input{
+/* input{
   border: 1px solid #707070;
   margin-top: 2px;
-  border-radius: 3px;
+  border-radius: 100%;
   width: 100%;
-}
+} */
 
 /* .form{
   display: flex;
@@ -188,6 +188,15 @@ input{
   color: #ff8534;
   font-family: 'nick';
   font-size: calc(20px + (50 - 20) * ((100vw - 300px) / (1600 - 300)))
+}
+
+input{
+  border: 1px solid #CECECE;
+  border-radius: 1vh;
+  margin: 0;
+  font-family: futura;
+  font-weight: 300;
+  font-size: 15px;
 }
 
 .form-area{
@@ -546,9 +555,12 @@ hr{
   .message{
     font-size: 12px;
   }
-  .comment-button{
+  /* .comment-button{
     font-size: 20px;
   }
+  .comment-button-open{
+    font-size: 20px;
+  } */
   .home img{
     top: 25vh;
   }
