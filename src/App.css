@@ -342,14 +342,14 @@ b{
 
 .thumb{
   width: 85%;
-  height: 50vh;
+  height: 60vh;
   background-color: rgba(255, 255, 255, 0);
   margin: 6px;
   padding: 1.5vh;
   font-family: futura, Montserrat;
   font-size: calc(45px + (75 - 45) * ((100vw - 300px) / (1600 - 300)));
   color: black;
-  margin-bottom: 5%;
+  margin-bottom: 7%;
   display: flex;
   flex-direction: column;
   transition: all .4s ease-in-out;
@@ -394,10 +394,11 @@ b{
   width: 50%;
   justify-content: space-between;
   overflow: hidden;
-  height: 100%;
+  /* height: 100%; */
   top: 1%;
   bottom: 2%;
   font-size: calc(25px + (75 - 25) * ((100vw - 300px) / (1600 - 300)));
+  /* margin-bottom: 15vh; */
 }
 
 .details .description{
@@ -411,7 +412,7 @@ b{
 .details img{
   overflow: hidden;
   width: 80%;
-  height: auto;
+  height: 40vh;
   object-fit: contain;
 }
 
