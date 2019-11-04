@@ -278,7 +278,9 @@ input{
   position: fixed;
   top: 25%;
   left: 55%;
+  /* transform: ; */
   transform: translate(-50%, -50%);
+  transform-origin: center;
   animation-name: quoteslide2;
   animation-duration: 4.5s;
 }
