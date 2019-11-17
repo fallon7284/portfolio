@@ -53,7 +53,7 @@ export default () => {
                 style={styles.button} 
                 component={Link} 
                 to={'/resume'}
-                prerender="true"
+                rel="prefetch"
                 >
                 <Typography style={styles.typography}>Resume</Typography>
             </Button>
@@ -71,7 +71,7 @@ export default () => {
                 style={styles.button} 
                 component={Link} 
                 to={'/contact'}
-                prerender="true"
+                rel="prefetch"
                 >
                 <Typography style={styles.typography}>Contact</Typography>
             </Button>
@@ -86,7 +86,7 @@ export default () => {
                 style={styles.button} 
                 component={Link} 
                 to={'/'}
-                prefetch="true"
+                rel="prefetch"
             >
                 <Typography style={{...styles.typography}}>Brendan Fallon</Typography>
             </Button>
@@ -97,7 +97,7 @@ export default () => {
                     style={styles.button} 
                     component={Link} 
                     to={'/bio'}
-                    prefetch="true"
+                    rel="prefetch"
                     >
                     <Typography style={{...styles.typography, color: window.location.pathname === '/bio' ? '#ff8534' : styles.typography.color}}>Bio</Typography>
                 </Button>            
@@ -106,7 +106,7 @@ export default () => {
                     style={styles.button} 
                     component={Link} 
                     to={'/projects'}
-                    prefetch="true"
+                    rel="prefetch"
                     >
                     <Typography style={{...styles.typography, color: window.location.pathname === '/projects' ? '#ff8534' : 'black'}}>Projects</Typography>
                 </Button>

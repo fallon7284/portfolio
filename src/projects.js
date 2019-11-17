@@ -1,12 +1,5 @@
 module.exports = [
     {
-        name: 'Explore Outdoors',
-        image: require('../src/images/explore-screen.png'),
-        description: 'A personal project, Google Maps- and Mountain Project-based React application along with Node/Express backend finds a user\'s location (or takes user input as address or location name and centers map to that location) and displays nearby hikes, climbs, and camping areas.',
-        deployed: 'http://explore-outdoors.herokuapp.com',
-        github: 'http://github.com/fallon7284/explore-outdoors'
-    },
-    {
         name: 'Pixalive',
         image: require('../src/images/pixalive.png'),
         description: 'Pixalive is a free, multi-user, real-time editor' +
@@ -15,6 +8,13 @@ module.exports = [
         'along with Socket.io, HTML Canvas, and PostgreSQL.',
         deployed: 'https://pixalive.herokuapp.com',
         github: 'https://github.com/pixalive/pixalive',
+    },
+    {
+        name: 'Explore Outdoors',
+        image: require('../src/images/explore-screen.png'),
+        description: 'A personal project, Google Maps- and Mountain Project-based React application along with Node/Express backend finds a user\'s location (or takes user input as address or location name and centers map to that location) and displays nearby hikes, climbs, and camping areas.',
+        deployed: 'http://explore-outdoors.herokuapp.com',
+        github: 'http://github.com/fallon7284/explore-outdoors'
     },
     {
         name: 'CatOrNah?',
