@@ -1,33 +1,37 @@
-import React from 'react';
+import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { 
-  Home,
-  Bio,
-  Projects,
-  Contact,
-  Resume
- } from '../src/components'
-import './App.css';
+import {
+    Home,
+    Bio,
+    Projects,
+    Contact,
+    Resume,
+    SwineSweeper,
+} from '../src/components'
+import './App.css'
 
 const wakeApi = async () => {
-  const data = await fetch('https://portfolio-comments.herokuapp.com/comments')
-  const json = await data.json()
-  return json
+    const data = await fetch(
+        'https://portfolio-comments.herokuapp.com/comments'
+    )
+    const json = await data.json()
+    return json
 }
 
 function App() {
-  wakeApi()
-  return (
-    <div className="App">
-      <Router>
-      <Route exact path="/" component={Home}/>
-      <Route exact path="/projects" component={Projects}/>
-      <Route path="/bio" component={Bio}/>
-      <Route path="/contact" component={Contact}/>
-      <Route path="/resume" component={Resume} />
-    </Router>
-    </div>
-  );
+    wakeApi()
+    return (
+        <div className="App">
+            <Router>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/projects" component={Projects} />
+                <Route path="/bio" component={Bio} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/resume" component={Resume} />
+                <Route path="/swinesweeper" component={SwineSweeper} />
+            </Router>
+        </div>
+    )
 }
 
-export default App;
+export default App

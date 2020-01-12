@@ -34,7 +34,8 @@ module.exports = [
         name: 'Swine Sweeper',
         image: require('../src/images/SwineSweeper.png'),
         description: 'Pig-Themed Minesweeper Game.',
-        deployed: 'https://sharp-cray-74c6dd.netlify.com/',
+        deployed: 'https://www.brendanfallon.dev/swinesweeper',
+        onSite: true,
         github: 'http://github.com/fallon7284/swine-sweeper',
     },
     {
