@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
 const github = require('../images/github.png')
 
-
-export default ({p}) => {
+export default ({ p }) => {
     const [hover, setHover] = useState(false)
     const deployedOrGithub = p.deployed ? p.deployed : p.github
+    console.log(p.onSite)
     return (
         <div className="thumb">
             <div className="project">
-                <a target="blank" rel="noopener noreferrer" href={deployedOrGithub} style={{
-                    textDecoration: 'none'}}
+                <a
+                    target={p.onSite ? '_self' : 'blank'}
+                    rel="noopener noreferrer"
+                    href={deployedOrGithub}
+                    style={{
+                        textDecoration: 'none',
+                    }}
                 >
                     {p.name}
                 </a>
@@ -17,20 +22,27 @@ export default ({p}) => {
             </div>
             <div className="project-body">
                 <div className="details">
-                    <a target="blank" rel="noopener noreferrer" href={deployedOrGithub}>
+                    <a
+                        target={p.onSite ? '_self' : 'blank'}
+                        rel="noopener noreferrer"
+                        href={deployedOrGithub}
+                    >
                         <img src={p.image} alt={p.name}></img>
                     </a>
                 </div>
                 <div className="details">
-                    <p className="description">
-                        {p.description}
-                    </p>
+                    <p className="description">{p.description}</p>
                     <a target="blank" rel="noopener noreferrer" href={p.github}>
-                        <img style={{height: hover ? '9vw' : '8vw'}} src={github} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}></img>
+                        <img
+                            style={{ height: hover ? '9vw' : '8vw' }}
+                            src={github}
+                            onMouseOver={() => setHover(true)}
+                            onMouseOut={() => setHover(false)}
+                        ></img>
                     </a>
                     <div className="clearfix"></div>
                 </div>
             </div>
         </div>
-    ) 
+    )
 }
