@@ -8,11 +8,13 @@ export default () => {
     return (
         <div>
             <div className="home">
-                <Link to="/bio" style={{textDecoration: 'none', color: 'black'}} rel="prefetch">
+                <Link
+                    to="/bio"
+                    style={{ textDecoration: 'none', color: 'black' }}
+                    rel="prefetch"
+                >
                     <div className="quote">
-                        <div className="quote1">
-                             {"{ brendanFallon: "}
-                        </div>
+                        <div className="quote1">{'{ brendanFallon: '}</div>
                         <div className="quote2">
                             {"['Fullstack', 'Software', 'Engineer']}"}
                         </div>
