@@ -23,9 +23,9 @@ function App() {
     return (
         <div className="App">
             <Router>
-                <Route exact path="/" component={Home} />
+                <Route exact path="/" component={Bio} />
                 <Route exact path="/projects" component={Projects} />
-                <Route path="/bio" component={Bio} />
+                {/* <Route path="/bio" component={Bio} /> */}
                 <Route path="/contact" component={Contact} />
                 <Route path="/resume" component={Resume} />
                 <Route path="/swinesweeper" component={SwineSweeper} />
