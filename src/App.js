@@ -11,6 +11,8 @@ import {
 import './App.css'
 
 const wakeApi = async () => {
+    fetch('http://explore-outdoors.herokuapp.com/')
+    fetch('http://pixalive.herokuapp.com/')
     const data = await fetch(
         'https://portfolio-comments.herokuapp.com/comments'
     )
