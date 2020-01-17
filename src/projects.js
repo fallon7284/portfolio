@@ -32,7 +32,7 @@ module.exports = [
     },
     {
         name: 'Swine Sweeper',
-        image: require('../src/images/SwineSweeper.png'),
+        image: require('../src/images/SwineSweeper.gif'),
         description: 'Pig-Themed Minesweeper Game.',
         deployed: 'https://www.brendanfallon.dev/swinesweeper',
         onSite: true,

@@ -13,15 +13,12 @@ export default () => {
             <div className="bio-body">
                 <div style={{ display: 'flex' }}>
                     <div style={{ display: 'inline-block' }}>
-                        <div>
-                            Hi. It's me: the developer you've been looking for.
-                        </div>
+                        <div>Hi. I'm Brendan. I'm a Software Engineer.</div>
                         <div>
                             I specialize in full stack JavaScript utilizing{' '}
                             <span>Node</span> and <span>Express</span> on the
-                            back end, <span>React</span> on the front end with{' '}
-                            <span>React-Hooks</span> or <span>Redux</span> for
-                            state management, <span>PostgreSQL</span> databases
+                            back end, <span>React</span> and <span>Redux</span>{' '}
+                            on the front end, <span>PostgreSQL</span> databases
                             and, of course, <span>HTML5</span> and{' '}
                             <span>CSS3</span>.
                         </div>
@@ -49,18 +46,16 @@ export default () => {
                     </div>
                 </div>
                 <div>
-                    Not very long ago I was contributing my daily efforts to
-                    building skyscrapers rather than web applications, but in
-                    December of 2018, after completing a one-week bootcamp prep
-                    course, I decided that I wanted to change my life by
-                    changing my career path, and I enrolled in the full-time
-                    immersive program at Fullstack Academy.
+                    In December of 2018, after completing a one-week bootcamp
+                    prep course at Fullstack Academy, I decided that I wanted to
+                    change my life by changing my career path, and I enrolled in
+                    the full-time immersive program at Fullstack Academy.
                 </div>
                 <br />
                 <div>
-                    I love building software that is both functional and
-                    beautiful. From <span>API</span> design to reusable{' '}
-                    <span>React</span> components to complex{' '}
+                    I love building software that is functional and provides a
+                    delightful user experience. From <span>REST API</span>{' '}
+                    design to reusable <span>React</span> components to complex{' '}
                     <span>state management</span>, I am focused and driven to
                     master the technologies that underpin visually appealing,
                     fast, and functional software.

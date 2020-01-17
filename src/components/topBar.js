@@ -105,14 +105,14 @@ export default () => {
                         className="button"
                         style={styles.button}
                         component={Link}
-                        to={'/bio'}
+                        to={'/'}
                         rel="prefetch"
                     >
                         <Typography
                             style={{
                                 ...styles.typography,
                                 color:
-                                    window.location.pathname === '/bio'
+                                    window.location.pathname === '/'
                                         ? '#ff8534'
                                         : styles.typography.color,
                             }}
