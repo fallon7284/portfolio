@@ -12,7 +12,7 @@ module.exports = [
     },
     {
         name: 'Explore Outdoors',
-        image: require('../src/images/explore-screen.png'),
+        image: require('../src/images/Explore.gif'),
         description:
             "A personal project, Google Maps- and Mountain Project-based React application along with Node/Express backend finds a user's location (or takes user input as address or location name and centers map to that location) and displays nearby hikes, climbs, and camping areas.",
         deployed: 'http://explore-outdoors.herokuapp.com',
