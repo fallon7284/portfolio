@@ -11,6 +11,23 @@ module.exports = [
         github: 'https://github.com/pixalive/pixalive',
     },
     {
+        name: 'CoronaTracker',
+        image: require('../src/images/coronatracker.png'),
+        description:
+            'CoronaTracker is an easy-to-use and accessible progressive web application that helps you monitor your wellness and stay informed during the COVID-19 crisis, designed by an open-source community invested in public health.',
+        deployed: 'https://coronatrackerbeta.com/',
+        github:
+            'https://github.com/COVID-19-electronic-health-system/Corona-tracker',
+    },
+    {
+        name: 'Swine Sweeper',
+        image: require('../src/images/SwineSweeper.gif'),
+        description: 'Pig-Themed Minesweeper Game.',
+        deployed: 'https://www.brendanfallon.dev/swinesweeper',
+        onSite: true,
+        github: 'http://github.com/fallon7284/swine-sweeper',
+    },
+    {
         name: 'Explore Outdoors',
         image: require('../src/images/Explore.gif'),
         description:
@@ -29,14 +46,6 @@ module.exports = [
             ' to snap a photo and identify the subject as either a cat... or nah.',
         deployed: null,
         github: 'https://github.com/fallon7284/catornah-',
-    },
-    {
-        name: 'Swine Sweeper',
-        image: require('../src/images/SwineSweeper.gif'),
-        description: 'Pig-Themed Minesweeper Game.',
-        deployed: 'https://www.brendanfallon.dev/swinesweeper',
-        onSite: true,
-        github: 'http://github.com/fallon7284/swine-sweeper',
     },
     {
         name: 'Grace Shopper',
