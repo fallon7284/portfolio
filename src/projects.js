@@ -11,7 +11,7 @@ module.exports = [
         github: 'https://github.com/pixalive/pixalive',
     },
     {
-        name: 'CoronaTracker',
+        name: 'Corona Tracker',
         image: require('../src/images/coronatracker.png'),
         description:
             'CoronaTracker is an easy-to-use and accessible progressive web application that helps you monitor your wellness and stay informed during the COVID-19 crisis, designed by an open-source community invested in public health.',
